@@ -109,7 +109,7 @@ namespace cinder {
             bConnected = false;
             
             this->app = app;
-            this->app->getSignalUpdate().connect([=](){update();});
+            this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ));
             
             //TODO: See if we can add a listener here to websocketpp cinder to automate this
             //WebSocketPP Interface
@@ -126,7 +126,7 @@ namespace cinder {
         
         Connection::~Connection()
         {
-//            this->app->getSignalUpdate().disconnect([=](){update();});
+            this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ));
         }
         
 
