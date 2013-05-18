@@ -126,18 +126,19 @@ namespace cinder {
             void onPing();
             
             
-            //This is the connection to the outside world
-            signals::signal<void (Message)> onMessageConnection;
+            //This is the connection to your cinder app's onMessage function
+            signals::signal<void (Message)> onMessage;
             
             //This is how the connection to the outside world works
             template<typename T, typename Y>
             inline void addListener(T callback, Y *callbackObject)
             {
-                onMessageConnection.connect(std::bind(callback, callbackObject, std::placeholders::_1));
+                onMessage.connect(std::bind(callback, callbackObject, std::placeholders::_1));
             }
             
         protected:
             
+            signals::connection updateConnection;
             cinder::app::App * app;
             void update( );
             
