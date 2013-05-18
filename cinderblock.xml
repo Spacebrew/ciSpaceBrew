@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Spacebrew"
+	id="org.libcinder.spacebrew"
+	author="Cinder Project, Ryan Bartley (based on Brett Renfer's work)"
+	license="BSD"
+	summary="Implements the Spacebrew Websocket Protocol."
+	>
+    <platform os="macosx">
+        <sourcePattern>src/ciSpaceBrew.cpp</sourcePattern>
+        <headerPattern>src/ciSpaceBrew.h</headerPattern>
+        <includePath>src</includePath>
+	</platform>
+</block>
+</cinder>
