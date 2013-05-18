@@ -76,23 +76,24 @@ namespace cinder {
         {
             string message = "{\"config\": {\"name\": \"" + name +"\",\"description\":\"" + description +"\",\"publish\": {\"messages\": [";
             
-            for (int i=0, len=publish.size(); i<len; i++){
-                message += "{\"name\":\"" + publish[i].name + "\",";
-                message += "\"type\":\"" + publish[i].type + "\",";
-                message += "\"default\":\"" + publish[i].value + "\"";
+            
+            for (vector<Message>::iterator it = publish.begin(); it < publish.end(); it++){
+                message += "{\"name\":\"" + it->name + "\",";
+                message += "\"type\":\"" + it->type + "\",";
+                message += "\"default\":\"" + it->value + "\"";
                 message += "}";
-                if ( i+1 < len ){
+                if ( (it + 1) < publish.end() ){
                     message += ",";
                 }
             }
             
             message += "]},\"subscribe\": {\"messages\": [";
             
-            for (int i=0, len=subscribe.size(); i<len; i++){
-                message += "{\"name\":\"" + subscribe[i].name + "\",";
-                message += "\"type\":\"" + subscribe[i].type + "\"";
+            for (vector<Message>::iterator it = subscribe.begin(); it < subscribe.end(); it++){
+                message += "{\"name\":\"" + it->name + "\",";
+                message += "\"type\":\"" + it->type + "\"";
                 message += "}";
-                if ( i+1 < len ){
+                if ( (it + 1) < subscribe.end() ){
                     message += ",";
                 }
             }
@@ -126,7 +127,7 @@ namespace cinder {
         
         Connection::~Connection()
         {
-            this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ));
+            this->app->getSignalUpdate().disconnect( std::bind( &Connection::update, this ));
         }
         
 
@@ -155,7 +156,7 @@ namespace cinder {
         
         void Connection::connect( string _host, Config _config )
         {
-            host = _host;
+            host = "ws://" + _host + ":" + to_string(SPACEBREW_PORT);
             config = _config;
             
             client.connect(host);
@@ -308,7 +309,6 @@ namespace cinder {
         void Connection::onRead( string stuff )
         {
             Message m;
-            cout << stuff << endl;
             Json::Value json;
             Json::Reader reader;
             if (reader.parse(stuff, json)) {
