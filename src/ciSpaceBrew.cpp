@@ -302,9 +302,9 @@ namespace cinder {
             lastTimeTriedConnect = this->app->getElapsedSeconds();
         }
         
-        void Connection::onError( string msg )
+        void Connection::onError( string err )
         {
-            cout << "error: " << msg << endl;
+            cout << "error: " << err << endl;
         }
         
         void Connection::onRead( string stuff )
@@ -342,7 +342,7 @@ namespace cinder {
             
         }
         
-        void Connection::onPing()
+        void Connection::onPing( string msg )
         {
             
         }

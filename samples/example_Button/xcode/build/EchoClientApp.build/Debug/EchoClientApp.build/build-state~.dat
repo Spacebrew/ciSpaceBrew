@@ -1,425 +1,0 @@
-TEchoClientApp
-v5
-r1
-cCheck dependencies
-cProcessInfoPlistFile "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Info.plist" Info.plist
-cCpResource CinderApp.icns ./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns
-cProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-c000000005130312F00000000000000AA
-t1362112815
-s170
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
-c00000000518D926D00000000000024F0
-t1368232557
-s9456
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
-c00000000518D926D0000000000007C70
-t1368232557
-s31856
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000518D926E0000000000024DD8
-t1368232558
-s151000
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
-c00000000518D926E00000000000060B4
-t1368232558
-s24756
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c00000000518D926E00000000000001E5
-t1368232558
-s485
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
-c00000000518D926E000000000000E9A8
-t1368232558
-s59816
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c00000000518D926E0000000000019AD0
-t1368232558
-s105168
-
-N/System/Library/Frameworks/Carbon.framework/Carbon
-c000000004E8FDD0F0000000000006530
-t1318051087
-s25904
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004E8FDD0F0000000000006560
-t1318051087
-s25952
-
-N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
-c000000004F9D0514000000000007CED0
-t1335690516
-s511696
-
-N/System/Library/Frameworks/OpenGL.framework/OpenGL
-c00000000506C0787000000000002D360
-t1349257095
-s185184
-
-N/System/Library/Frameworks/QTKit.framework/QTKit
-c00000000506C0B1A00000000004B9FB0
-t1349258010
-s4956080
-
-N/System/Library/Frameworks/QuickTime.framework/QuickTime
-c00000000517F64E8000000000032B7E0
-t1367303400
-s3323872
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp
-c00000000518E78AF0000000000000E30
-t1368291503
-s3632
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c
-c00000000518E78AF0000000000003098
-t1368291503
-s12440
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp
-c00000000518E78AF00000000000032C1
-t1368291503
-s12993
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp
-c00000000518E78ED0000000000001169
-t1368291565
-s4457
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Info.plist
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/MacOS/EchoClientApp
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/PkgInfo
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.LinkFileList
-c00000000518E78ED000000000000031B
-t1368291565
-s795
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.LinkFileList
-c00000000518E78ED0000000000000323
-t1368291565
-s803
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o
-t2
-s0
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/CinderApp.icns
-c00000000518E78AF000000000005A168
-t1368291503
-s369000
-
-N/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch
-c00000000518E78AF0000000000000093
-t1368291503
-s147
-i<Cocoa/Cocoa.h>
-
-N/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth
-t2
-s0
-
-N/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth
-t2
-s0
-
-N/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth
-t2
-s0
-
-N/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth
-t2
-s0
-
-NInfo.plist
-c00000000518E78AF0000000000000354
-t1368291503
-s852
-
-CBuild AST from "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp"
-r0
-
-CBuild AST from "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c"
-r0
-
-CBuild AST from "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp"
-r0
-
-CBuild AST from "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp"
-r0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies22c65b6db03eb741^d577866db03eb741^---0#1#0#--18"Check dependencies36"DB071D33-2927-4042-9EA4-660DBB3FBC22-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308871
-e389984430.448444
-r0
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cppe02e4f6eb03eb741^b379e4b0b03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp0000000000000000^3240"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o ../src/EchoClientApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp.o"36"A60E954B-B5B0-4E04-892A-12DB67DAAB6D-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308322
-e389984430.431982
-r0
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cppc8094f6eb03eb741^5794deb0b03eb741^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp0000000000000000^3264"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o ../../../src/WebSocketClient.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/WebSocketClient.o"36"0352C8E8-857B-4856-907D-C4A7D9DC88A1-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308340
-e389984367.309882
-r1
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection155"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.cf0174f6eb03eb741^2e534f6fb03eb741^---0#0#0#-19%DVTDocumentLocation2@165"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c0000000000000000^3063"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o ../../../src/websocketpp/md5/md5.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/md5.o"36"7ECE5C31-E3CB-444C-99F4-5EA4E2EC5918-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308887
-e389984367.311727
-r1
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection159"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cppbe324f6eb03eb741^02d54f6fb03eb741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp0000000000000000^3232"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o ../../../src/websocketpp/sha1/sha1.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/sha1.o"36"269E7508-98B4-4B9B-B1A2-8AB38D91B48D-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308139
-e389984430.432004
-r0
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection145"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp9e074f6eb03eb741^9275e4b0b03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp0000000000000000^3254"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o ../src/EchoClientApp.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../src/EchoClientApp.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp.o"36"EC2F174B-A7F8-4958-97E2-7A09750E95CC-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308142
-e389984430.432049
-r0
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp8e034f6eb03eb741^7578e4b0b03eb741^---0#0#0#-19%DVTDocumentLocation2@163"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp0000000000000000^3278"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o ../../../src/WebSocketClient.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/WebSocketClient.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/WebSocketClient.o"36"33FFDFA0-EB17-40E0-93A6-36A444796783-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.309966
-e389984367.310699
-r1
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection155"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c00754f6eb03eb741^0d894f6fb03eb741^---0#0#0#-19%DVTDocumentLocation2@165"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c0000000000000000^3077"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o ../../../src/websocketpp/md5/md5.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/md5/md5.c" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/md5.o"36"5A017378-9906-438A-9059-C71E2E53F30C-
-
-CCompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984366.308287
-e389984367.311354
-r1
-xCompileC
-x./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection159"Compile /Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cppba104f6eb03eb741^5fb84f6fb03eb741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp0000000000000000^3246"CompileC ./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o ../../../src/websocketpp/sha1/sha1.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" -include /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch -MMD -MT dependencies -MF "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.d" --serialize-diagnostics "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.dia" -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/../../../src/websocketpp/sha1/sha1.cpp" -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/sha1.o"36"452CEEAC-27D8-44F3-AAE0-59F6C55F83E3-
-
-CCpResource CinderApp.icns ./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns
-s389984365.647129
-e389984365.775861
-r1
-xCpResource
-xCinderApp.icns
-x./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy ./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icnsfab9a56db03eb741^389fc66db03eb741^---0#0#0#-19%DVTDocumentLocation2@196"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns000000000080d041^622"CpResource CinderApp.icns ./build/Debug/EchoClientApp.app/Contents/Resources/CinderApp.icns    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/CinderApp.icns" "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Resources"36"76EDA602-40B9-44B8-88C1-8463EB72DC63-
-
-CCreateUniversalBinary "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/MacOS/EchoClientApp" normal "x86_64 i386"
-r0
-
-CLd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/i386/EchoClientApp" normal i386
-r0
-
-CLd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/Objects-normal/x86_64/EchoClientApp" normal x86_64
-r0
-
-CProcessInfoPlistFile "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Info.plist" Info.plist
-s389984365.532118
-e389984365.638888
-r1
-xProcessInfoPlistFile
-x/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Info.plist
-xInfo.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plistb54e886db03eb741^b58da36db03eb741^---0#0#0#-19%DVTDocumentLocation2@141"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/Info.plist0000000000000000^630"ProcessInfoPlistFile ./build/Debug/EchoClientApp.app/Contents/Info.plist Info.plist    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    builtin-infoPlistUtility Info.plist -genpkginfo "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/PkgInfo" -expandbuildsettings -platform macosx -o "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app/Contents/Info.plist"36"8339009D-F824-454A-B7A5-370EC28FBEA8-
-
-CProcessPCH /Users/ryanbartley/Library/Developer/Xcode/DerivedData/EchoClientApp-bvzsjzqufhvpeycqjuxchnewmogl/Index/PrecompiledHeaders/EchoClientApp_Prefix-axeafssauikfkmbetbmibsuxrhgy_ast/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /Users/ryanbartley/Library/Developer/Xcode/DerivedData/EchoClientApp-bvzsjzqufhvpeycqjuxchnewmogl/Index/PrecompiledHeaders/EchoClientApp_Prefix-bbrlmgaolrbcxbbseauawuwbeyvm_ast/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-s389984365.784708
-e389984366.302313
-r1
-xProcessPCH
-x/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth
-xEchoClientApp_Prefix.pch
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile EchoClientApp_Prefix.pch240ec96db03eb741^52644d6eb03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch0000000000000000^2903"ProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" --serialize-diagnostics /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.dia -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch" -o /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dxylkjxlmzsmfofwaiuqqorltbce/EchoClientApp_Prefix.pch.d36"3D111C45-CFE5-4F5F-94EB-B6530FE8811C-
-
-CProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-s389984365.785341
-e389984366.302015
-r1
-xProcessPCH
-x/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth
-xEchoClientApp_Prefix.pch
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile EchoClientApp_Prefix.pch7d24c96db03eb741^8b534d6eb03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch0000000000000000^2897"ProcessPCH /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.7 -g -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" --serialize-diagnostics /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.dia -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch" -o /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-dzakgedbmhqswbegdijaylxrqzxp/EchoClientApp_Prefix.pch.d36"41920AC9-C59F-4B97-AEBC-0428E4E80F9B-
-
-CProcessPCH++ /Users/ryanbartley/Library/Developer/Xcode/DerivedData/EchoClientApp-bvzsjzqufhvpeycqjuxchnewmogl/Index/PrecompiledHeaders/EchoClientApp_Prefix-cuhmlxzdpvulajgxyvvmgqefylny_ast/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /Users/ryanbartley/Library/Developer/Xcode/DerivedData/EchoClientApp-bvzsjzqufhvpeycqjuxchnewmogl/Index/PrecompiledHeaders/EchoClientApp_Prefix-dztrvfdddflbgpgqhclukldcguxj_ast/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
-r0
-
-CProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984365.784704
-e389984366.301799
-r1
-xProcessPCH++
-x/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth
-xEchoClientApp_Prefix.pch
-xnormal
-xx86_64
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile EchoClientApp_Prefix.pch170dc96db03eb741^5f424d6eb03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch0000000000000000^3062"ProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/x86_64" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" --serialize-diagnostics /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.dia -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch" -o /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-ajgvgoncyvbywvbocrdhrhnomboy/EchoClientApp_Prefix.pch.d36"C2163AB4-7EAA-440F-9B61-C1252439BDEF-
-
-CProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s389984365.784726
-e389984366.302156
-r1
-xProcessPCH++
-x/var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth
-xEchoClientApp_Prefix.pch
-xnormal
-xi386
-xc++
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection35"Precompile EchoClientApp_Prefix.pch020ec96db03eb741^0c594d6eb03eb741^---0#0#0#-19%DVTDocumentLocation2@155"file://localhost/Users/ryanbartley/Documents/XCODE%20LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch0000000000000000^3056"ProcessPCH++ /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth EchoClientApp_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -fvisibility-inlines-hidden -Wno-sign-conversion "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/EchoClientApp.hmap" -I../../../../../include -I../../../../../blocks/Cinder-WebSocketPP/src "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug/include" -I../../../../../boost "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources/i386" "-I/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/EchoClientApp.build/Debug/EchoClientApp.build/DerivedSources" "-F/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/build/Debug" --serialize-diagnostics /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.dia -c "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/EchoClientApp_Prefix.pch" -o /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/zg/nnytl3_x1510pxbvgjfbl_gc0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/EchoClientApp_Prefix-djnngjhopiaztzdbkzygfprkcfxs/EchoClientApp_Prefix.pch.d36"06081558-218A-448F-9438-62391F2B34D5-
-
-CTouch "/Users/ryanbartley/Documents/XCODE LIBRARIES/cinder_0.8.5_mac/blocks/Cinder-WebSocketPP/samples/EchoClient/xcode/./build/Debug/EchoClientApp.app"
-r0
-

@@ -238,10 +238,10 @@ namespace cinder {
             //These are the connections to ciWebSocketPP
             void onConnect();
             void onDisconnect();
-            void onError( std::string msg );
-            void onRead(std::string msg);
+            void onError( std::string err );
+            void onRead( std::string msg );
             void onInterrupt();
-            void onPing();
+            void onPing( std::string msg );
             
             /**
              * @brief signal to subscribe to!
