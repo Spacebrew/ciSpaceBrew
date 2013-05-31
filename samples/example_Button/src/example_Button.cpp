@@ -1,5 +1,4 @@
 #include "cinder/app/AppBasic.h"
-#include "cinder/params/Params.h"
 #include "cinder/Text.h"
 #include "cinder/gl/TextureFont.h"
 #include "cinder/gl/Texture.h"

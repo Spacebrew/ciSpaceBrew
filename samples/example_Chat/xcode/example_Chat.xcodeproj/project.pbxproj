@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		17D456A9891041C6973EEC41 /* ciSpaceBrew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDF47F47C7B34A45A912654A /* ciSpaceBrew.cpp */; };
+		31CB0686B1D34BE28CE5B4E4 /* Chat_App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B22FD1BF12043D59C581962 /* Chat_App.cpp */; };
+		3A5B40726C9F41C8A8309B8A /* WebSocketConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5AC16BB079F4F69AA231BFE /* WebSocketConnection.cpp */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		58EA52192E704582A1063623 /* WebSocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E44113A8E4048A199432588 /* WebSocketServer.cpp */; };
+		6A275E3A146E403EB8D0986B /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0938186B98054A1C8731B9BF /* sha1.cpp */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F3528765B7E3418EAB07B7FC /* WebSocketClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AB13815D293144B78DAC0507 /* WebSocketClient.cpp */; };
+		F7206D3BD35243CBB5373D46 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 39DA6FF9DAC5429CA1EC9374 /* CinderApp.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0938186B98054A1C8731B9BF /* sha1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = sha1.cpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/sha1/sha1.cpp"; sourceTree = "<group>"; };
+		09C56B8A3D6E4C24A40E5D4E /* WebSocketConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketConnection.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.h"; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1298DB228B6A437D91876C80 /* endpoint.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = endpoint.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/endpoint.hpp"; sourceTree = "<group>"; };
+		12A192177C734F429906FC25 /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = server.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/server.hpp"; sourceTree = "<group>"; };
+		2350E92CE97C42608E9A2701 /* ciSpaceBrew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciSpaceBrew.h; path = ../../../src/ciSpaceBrew.h; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2A0CA585F5AB4D5CA2AF50DB /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		2DA33657020345FE97EE4A26 /* utilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = utilities.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/utilities.hpp"; sourceTree = "<group>"; };
+		39DA6FF9DAC5429CA1EC9374 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		3E44113A8E4048A199432588 /* WebSocketServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketServer.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.cpp"; sourceTree = "<group>"; };
+		497A634CF89B4C52B2D14B33 /* WebSocketServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketServer.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.h"; sourceTree = "<group>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		6B22FD1BF12043D59C581962 /* Chat_App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Chat_App.cpp; path = ../src/Chat_App.cpp; sourceTree = "<group>"; };
+		6C1DEB0C70884A10A9A44B9C /* close.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = close.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/close.hpp"; sourceTree = "<group>"; };
+		7A84E2C3BA964A62A5522F31 /* sha1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = "../../../../Cinder-WebSocketPP/src/websocketpp/sha1/sha1.h"; sourceTree = "<group>"; };
+		7FB24E885D1B4E43AE81BAC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* example_Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		964305205A4847D193F8E5A9 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "../../../../Cinder-WebSocketPP/src/websocketpp/base64/base64.h"; sourceTree = "<group>"; };
+		9E9CD77F5BB745619733991D /* uri.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = uri.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/uri.hpp"; sourceTree = "<group>"; };
+		A1D5D258C70345069C625950 /* common.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = common.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/common.hpp"; sourceTree = "<group>"; };
+		A3F8FBD007AB4E1FAD0E1384 /* client.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = client.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/client.hpp"; sourceTree = "<group>"; };
+		A5AC16BB079F4F69AA231BFE /* WebSocketConnection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketConnection.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.cpp"; sourceTree = "<group>"; };
+		A65A9F78515F4DDA99EF94A9 /* endpoint_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = endpoint_base.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/endpoint_base.hpp"; sourceTree = "<group>"; };
+		A8F9A39A71574C249FB29D43 /* error_container.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = error_container.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/error_container.hpp"; sourceTree = "<group>"; };
+		AB13815D293144B78DAC0507 /* WebSocketClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketClient.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.cpp"; sourceTree = "<group>"; };
+		AEC911C55E5A4933B70EA5AA /* WebSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.h"; sourceTree = "<group>"; };
+		AF41426E722C41019AB2FC08 /* connection.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = connection.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/connection.hpp"; sourceTree = "<group>"; };
+		C9CBBFCF97744DB09672DB34 /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = md5.h; path = "../../../../Cinder-WebSocketPP/src/websocketpp/md5/md5.h"; sourceTree = "<group>"; };
+		CDF47F47C7B34A45A912654A /* ciSpaceBrew.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = ciSpaceBrew.cpp; path = ../../../src/ciSpaceBrew.cpp; sourceTree = "<group>"; };
+		E346C675D49D4D2E979534DA /* example_Chat_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = example_Chat_Prefix.pch; sourceTree = "<group>"; };
+		E34C55A3EE384DC5ACE00972 /* connection_base.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = connection_base.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/connection_base.hpp"; sourceTree = "<group>"; };
+		F23932ABC9CA4AD19DFA53A6 /* utf8_validator.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = utf8_validator.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/utf8_validator.hpp"; sourceTree = "<group>"; };
+		F47EB53FC7AA4A5DB4AA6A4A /* frame.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = frame.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/frame.hpp"; sourceTree = "<group>"; };
+		F9AAE53B98504A9188C13A5A /* error.hpp */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = error.hpp; path = "../../../../Cinder-WebSocketPP/src/websocketpp/error.hpp"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0000F0BFD25544A5998C1EF9 /* sha1 */ = {
+			isa = PBXGroup;
+			children = (
+				0938186B98054A1C8731B9BF /* sha1.cpp */,
+				7A84E2C3BA964A62A5522F31 /* sha1.h */,
+			);
+			name = sha1;
+			sourceTree = "<group>";
+		};
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				A196CF0D54DC4624AD9F0286 /* Cinder-WebSocketPP */,
+				74ECF3913D8D426AB81C6A73 /* Spacebrew */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6B22FD1BF12043D59C581962 /* Chat_App.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B50EAFCA7E003A9687 /* QTKit.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1729F9CD061E423F8BD8BB1B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CDF47F47C7B34A45A912654A /* ciSpaceBrew.cpp */,
+				2350E92CE97C42608E9A2701 /* ciSpaceBrew.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* example_Chat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		234C21020AAF4445951BAB1D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AB13815D293144B78DAC0507 /* WebSocketClient.cpp */,
+				A5AC16BB079F4F69AA231BFE /* WebSocketConnection.cpp */,
+				3E44113A8E4048A199432588 /* WebSocketServer.cpp */,
+				9595FE0071EA4EAEBB963586 /* websocketpp */,
+				AEC911C55E5A4933B70EA5AA /* WebSocketClient.h */,
+				09C56B8A3D6E4C24A40E5D4E /* WebSocketConnection.h */,
+				497A634CF89B4C52B2D14B33 /* WebSocketServer.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* example_Chat */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = example_Chat;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				2A0CA585F5AB4D5CA2AF50DB /* Resources.h */,
+				E346C675D49D4D2E979534DA /* example_Chat_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39DA6FF9DAC5429CA1EC9374 /* CinderApp.icns */,
+				7FB24E885D1B4E43AE81BAC2 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4860B7E546B2485F940F97C6 /* base64 */ = {
+			isa = PBXGroup;
+			children = (
+				964305205A4847D193F8E5A9 /* base64.h */,
+			);
+			name = base64;
+			sourceTree = "<group>";
+		};
+		74ECF3913D8D426AB81C6A73 /* Spacebrew */ = {
+			isa = PBXGroup;
+			children = (
+				1729F9CD061E423F8BD8BB1B /* src */,
+			);
+			name = Spacebrew;
+			sourceTree = "<group>";
+		};
+		86103CFA6C064B53B5F9A33B /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				C9CBBFCF97744DB09672DB34 /* md5.h */,
+			);
+			name = md5;
+			sourceTree = "<group>";
+		};
+		9595FE0071EA4EAEBB963586 /* websocketpp */ = {
+			isa = PBXGroup;
+			children = (
+				0000F0BFD25544A5998C1EF9 /* sha1 */,
+				A3F8FBD007AB4E1FAD0E1384 /* client.hpp */,
+				6C1DEB0C70884A10A9A44B9C /* close.hpp */,
+				A1D5D258C70345069C625950 /* common.hpp */,
+				AF41426E722C41019AB2FC08 /* connection.hpp */,
+				E34C55A3EE384DC5ACE00972 /* connection_base.hpp */,
+				1298DB228B6A437D91876C80 /* endpoint.hpp */,
+				A65A9F78515F4DDA99EF94A9 /* endpoint_base.hpp */,
+				F9AAE53B98504A9188C13A5A /* error.hpp */,
+				A8F9A39A71574C249FB29D43 /* error_container.hpp */,
+				F47EB53FC7AA4A5DB4AA6A4A /* frame.hpp */,
+				12A192177C734F429906FC25 /* server.hpp */,
+				9E9CD77F5BB745619733991D /* uri.hpp */,
+				F23932ABC9CA4AD19DFA53A6 /* utf8_validator.hpp */,
+				2DA33657020345FE97EE4A26 /* utilities.hpp */,
+				4860B7E546B2485F940F97C6 /* base64 */,
+				86103CFA6C064B53B5F9A33B /* md5 */,
+			);
+			name = websocketpp;
+			sourceTree = "<group>";
+		};
+		A196CF0D54DC4624AD9F0286 /* Cinder-WebSocketPP */ = {
+			isa = PBXGroup;
+			children = (
+				234C21020AAF4445951BAB1D /* src */,
+			);
+			name = "Cinder-WebSocketPP";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* example_Chat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "example_Chat" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = example_Chat;
+			productInstallPath = "$(HOME)/Applications";
+			productName = example_Chat;
+			productReference = 8D1107320486CEB800E47090 /* example_Chat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "example_Chat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* example_Chat */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* example_Chat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7206D3BD35243CBB5373D46 /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31CB0686B1D34BE28CE5B4E4 /* Chat_App.cpp in Sources */,
+				F3528765B7E3418EAB07B7FC /* WebSocketClient.cpp in Sources */,
+				3A5B40726C9F41C8A8309B8A /* WebSocketConnection.cpp in Sources */,
+				58EA52192E704582A1063623 /* WebSocketServer.cpp in Sources */,
+				6A275E3A146E403EB8D0986B /* sha1.cpp in Sources */,
+				17D456A9891041C6973EEC41 /* ciSpaceBrew.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = example_Chat_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "\"../../../../Cinder-WebSocketPP/lib/macosx\"";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					"\"../../../../Cinder-WebSocketPP/lib/macosx/libboost_random.a\"",
+					"\"../../../../Cinder-WebSocketPP/lib/macosx/libboost_regex.a\"",
+				);
+				PRODUCT_NAME = example_Chat;
+				SDKROOT = "";
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = example_Chat_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "\"../../../../Cinder-WebSocketPP/lib/macosx\"";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder.a\"",
+					"\"../../../../Cinder-WebSocketPP/lib/macosx/libboost_random.a\"",
+					"\"../../../../Cinder-WebSocketPP/lib/macosx/libboost_regex.a\"",
+				);
+				PRODUCT_NAME = example_Chat;
+				SDKROOT = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../../../../Cinder-WebSocketPP/src\" ../../../src";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = i386;
+				CINDER_PATH = ../../../../..;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../../../../Cinder-WebSocketPP/src\" ../../../src";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "example_Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "example_Chat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
