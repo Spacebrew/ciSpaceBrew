@@ -3,7 +3,7 @@
 <block
 	name="Spacebrew"
 	id="org.libcinder.spacebrew"
-	author="Cinder Project, Ryan Bartley (based on Brett Renfer's work)"
+	author="Cinder Project, Ryan Bartley"
 	license="BSD"
 	summary="Implements the Spacebrew Websocket Protocol."
 	>
