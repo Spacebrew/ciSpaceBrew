@@ -5,7 +5,7 @@
 	id="org.libcinder.spacebrew"
 	author="Cinder Project, Ryan Bartley"
 	license="BSD"
-	summary="Implements the Spacebrew Websocket Protocol."
+	summary="Implements Brett Refner's Spacebrew Websocket Protocol."
 	>
     <platform os="macosx">
         <sourcePattern>src/ciSpaceBrew.cpp</sourcePattern>
