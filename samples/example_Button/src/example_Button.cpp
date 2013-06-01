@@ -38,14 +38,14 @@ public:
     gl::Texture         mTexture;
     
     // create your spacebrew object
-    Spacebrew::Connection* spacebrew;
+    Spacebrew::Connection spacebrew;
     string msg;
 };
 
 void Button::mouseUp( MouseEvent event )
 {
     if (bButtonPressed){
-        spacebrew->sendBoolean("button", false);
+        spacebrew.sendBoolean("button", false);
     }
     bButtonPressed = false;
     msg = "PRESS ME";
@@ -56,7 +56,7 @@ void Button::mouseDown( MouseEvent event )
     if ( checkInsideCircle( Vec2f(event.getPos()), Vec2f(getWindowWidth() / 2.0f, getWindowHeight()/2.0f), radius) ){
         msg = "THANKS";
         bButtonPressed = true;
-        spacebrew->sendBoolean("button", true);
+        spacebrew.sendBoolean("button", true);
     }
 }
 
@@ -75,13 +75,15 @@ void Button::setup()
     string name = "cinder-button-example";
     string description = "It's amazing";
     
-    spacebrew = new Spacebrew::Connection(this);
-    spacebrew->addPublish("button", Spacebrew::TYPE_BOOLEAN);
-    spacebrew->addSubscribe("background", Spacebrew::TYPE_BOOLEAN);
-    spacebrew->connect(host, name, description);
+    //create as many publishers and subscribers as you need.
+    spacebrew.addPublish("button", Spacebrew::TYPE_BOOLEAN);
+    spacebrew.addSubscribe("background", Spacebrew::TYPE_BOOLEAN);
+    
+    //send 'this' to Spacebrew so that it can connect to the update signal from cinder.
+    spacebrew.connect( this, host, name, description );
     
     // listen for spacebrew message events
-    spacebrew->addListener( &Button::onMessage, this);
+    spacebrew.addListener( &Button::onMessage, this);
     
     // circle stuff
     bButtonPressed  = false;
@@ -92,7 +94,7 @@ void Button::setup()
     mTextureFont    = gl::TextureFont::create( mFont );
     msg             = "PRESS ME";
     
-    Spacebrew::Config * config = spacebrew->getConfig();
+    Spacebrew::Config * config = spacebrew.getConfig();
     cout << config->getJSON() << endl;
     
 }

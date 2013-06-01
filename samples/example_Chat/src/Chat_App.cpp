@@ -23,7 +23,7 @@ class ChatApp : public AppNative {
     void renderChat( const vector<string> * chat, int placement, string label );
     void renderType();
     
-    Spacebrew::Connection * spacebrew;
+    Spacebrew::Connection spacebrew;
     
     vector<string>      iWrote;
     vector<string>      uWrote;
@@ -59,13 +59,12 @@ void ChatApp::setup()
     //change this name to distinguish between the chatters
     string name = "cinder-chat-example";
     string description = "It's amazing";
+
+    spacebrew.addPublish("myChat", Spacebrew::TYPE_STRING);
+    spacebrew.addSubscribe("yourChat", Spacebrew::TYPE_STRING);
+    spacebrew.connect(this, host, name, description);
     
-    spacebrew = new Spacebrew::Connection(this);
-    spacebrew->addPublish("myChat", Spacebrew::TYPE_STRING);
-    spacebrew->addSubscribe("yourChat", Spacebrew::TYPE_STRING);
-    spacebrew->connect(host, name, description);
-    
-    spacebrew->addListener( &ChatApp::onMessage, this);
+    spacebrew.addListener( &ChatApp::onMessage, this);
     
     receivedU = false;
     receivedMe = false;
@@ -151,14 +150,14 @@ void ChatApp::keyDown( KeyEvent event)
         s.pop_back();
     } else if (event.getCode() == KeyEvent::KEY_RETURN) {
         iWrote.push_back(s);
-        spacebrew->sendString("myChat", s);
+        spacebrew.sendString("myChat", s);
         s = "";
         receivedMe = true;
         cout << endl;
     }
 }
 
-void ChatApp::onMessage(Spacebrew::Message msg)
+void ChatApp::onMessage( Spacebrew::Message msg )
 {
     //This receives the message from your chatter and pushes the info into the vector
     if (msg.name == "yourChat") {

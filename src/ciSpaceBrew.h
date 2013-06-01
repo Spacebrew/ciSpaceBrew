@@ -115,23 +115,23 @@ namespace cinder {
          * @class Spacebrew::Connection
          */
         class Connection {
-            
-            //think about getting rid of the default constructor
-            Connection(){};
+        
             
         public:
             
-            Connection(cinder::app::App * app);
+            Connection();
+            
             ~Connection();
             
             /**
              * @brief Connect to Spacebrew. Pass empty values to connect to default host as "openFrameworks" app
              * (use only for testing!)
+             * @param {cinder::app::App*} app   This defines the attached cinder app to control time and update connection 
              * @param {std::string} host        Host to connect to (e.g. "localhost", SPACEBREW_CLOUD ). Can be IP address OR hostname
              * @param {std::string} name        Name of your app (shows up in Spacebrew admin)
              * @param {std::string} description What does your app do?
              */
-            void connect( std::string host = SPACEBREW_CLOUD, std::string name = "cinder app", std::string description = "" );
+            void connect( cinder::app::App * app, std::string host = SPACEBREW_CLOUD, std::string name = "cinder app", std::string description = "" );
             void connect( std::string host, Config _config );
             
             /**
@@ -258,8 +258,9 @@ namespace cinder {
             template<typename T, typename Y>
             inline void addListener(T callback, Y *callbackObject)
             {
-                onMessage.connect(std::bind(callback, callbackObject, std::placeholders::_1));
+                onMessage.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
             }
+            
             
         protected:
             

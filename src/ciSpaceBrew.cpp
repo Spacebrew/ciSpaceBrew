@@ -105,13 +105,11 @@ namespace cinder {
         
     #pragma mark Connection
         
-        Connection::Connection(cinder::app::App * app)
+        Connection::Connection()
         {
             bConnected = false;
             
-            this->app = app;
-            updateConnection = this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ));
-            
+            app = NULL;
             
             //TODO: See if we can add a listener here to websocketpp cinder to automate this
             //WebSocketPP Interface
@@ -121,7 +119,7 @@ namespace cinder {
             client.addInterruptCallback( &Connection::onInterrupt, this );
             client.addPingCallback( &Connection::onPing, this );
             client.addReadCallback( &Connection::onRead, this );
-                        
+            
             reconnectInterval = 2000;
             bAutoReconnect = false;
         }
@@ -145,8 +143,12 @@ namespace cinder {
             }
         }
         
-        void Connection::connect( string _host, string name, string description )
+        void Connection::connect( cinder::app::App * app, string _host, string name, string description )
         {
+            
+            this->app = app;
+            updateConnection = this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ));
+            
             host = "ws://" + _host + ":" + to_string(SPACEBREW_PORT);
             
             config.name = name;
@@ -160,7 +162,7 @@ namespace cinder {
             host = "ws://" + _host + ":" + to_string(SPACEBREW_PORT);
             config = _config;
             
-            client.connect(host);
+            client.connect( host );
         }
         
         void Connection::send( string name, string type, string value )
