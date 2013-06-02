@@ -145,7 +145,6 @@ void ChatApp::keyDown( KeyEvent event)
     //to send by pressing the enter or return key
     if (event.getCode() != KeyEvent::KEY_RETURN && event.getCode() != KeyEvent::KEY_BACKSPACE) {
         s += event.getChar();
-        cout << event.getCode();
     } else if (event.getCode() == KeyEvent::KEY_BACKSPACE) {
         s.pop_back();
     } else if (event.getCode() == KeyEvent::KEY_RETURN) {
@@ -153,7 +152,6 @@ void ChatApp::keyDown( KeyEvent event)
         spacebrew.sendString("myChat", s);
         s = "";
         receivedMe = true;
-        cout << endl;
     }
 }
 
