@@ -99,6 +99,17 @@ namespace cinder {
             void addPublish( std::string name, std::string type, std::string def);
             void addPublish( Message m );
             
+            std::vector<Message>& getPublish();
+            std::vector<Message>& getSubscribe();
+            void resetPubSub();
+            
+            //only used in configs from Admin Connection
+            std::string remoteAddress;
+            
+            // note: only use this with Admin configs!
+            // it only checks name/address
+            bool operator == ( Config & comp );
+            
             std::string getJSON();
             std::string name, description;
             
@@ -286,6 +297,154 @@ namespace cinder {
             
         //Creating the Routes
             
+        class RouteEndpoint {
+        public:
+            std::string clientName;
+            std::string name;
+            std::string type;
+            std::string remoteAddress;
             
+            bool operator==(RouteEndpoint comp)
+            {
+                return comp.clientName == clientName && comp.name == name && comp.type == type && comp.remoteAddress == remoteAddress;
+            }
+        };
+        
+        enum RouteUpdateType {
+            ADD_ROUTE,
+            REMOVE_ROUTE
+        };
+            
+        static std::string getRouteUpdateTypeString( RouteUpdateType type ){
+            switch(type){
+                case ADD_ROUTE:
+                    return "add";
+                    break;
+                case REMOVE_ROUTE:
+                    return "remove";
+                    break;
+            }
+        }
+            
+        class Route {
+        public:
+            Route(){};
+            Route( RouteEndpoint pub, RouteEndpoint sub);
+            
+            void updatePublisher( RouteEndpoint pub );
+            void updateSubscriber( RouteEndpoint pub );
+            
+            RouteEndpoint getPubEnd();
+            RouteEndpoint getSubEnd();
+            
+            inline bool operator == ( Route & r);
+            
+        private:
+            RouteEndpoint publisher, subscriber;
+        };
+            
+        struct DataMessage : public Message {
+        public:
+            std::string clientName;
+            std::string remoteAddress;
+        };
+            
+        class AdminConnection : public Connection {
+        public:
+
+            // websocket methods
+            virtual void onOpen( std::string  );
+            virtual void onMessage( std::string );
+            
+            // add routes
+            /**
+             * Method that is used to add a route to the Spacebrew server
+             * @param {String} pub_client               Publish client app name
+             * @param {String} pub_address              Publish app remote IP address
+             * @param {String} pub_name    				Publish name
+             * @param {String} sub_client  				Subscribe client app name
+             * @param {String} sub_address 				Subscribe app remote IP address
+             * @param {String} sub_name    				Subscribe name
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool addRoute( std::string pub_client, std::string pub_address, std::string pub_name,
+                          std::string sub_client, std::string sub_address, std::string sub_name );
+         
+            /**
+             * Method that is used to add a route to the Spacebrew server
+             * @param {RouteEndpoint} pub_endpoint       Publisher endpoint
+             * @param {RouteEndpoint} sub_endpoint       Subscriber endpoint
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool addRoute( RouteEndpoint pub_endpoint, RouteEndpoint sub_endpoint );
+         
+            /**
+             * Method that is used to add a route to the Spacebrew server
+             * @param {Route} route
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool addRoute( Route route );
+         
+            /**
+             * Method that is used to remove a route from the Spacebrew server
+             * @param {String} pub_client               Publish client app name
+             * @param {String} pub_address              Publish app remote IP address
+             * @param {String} pub_name    				Publish name
+             * @param {String} sub_client  				Subscribe client app name
+             * @param {String} sub_address 				Subscribe app remote IP address
+             * @param {String} sub_name    				Subscribe name
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool removeRoute( std::string pub_client, std::string pub_address, std::string pub_name,
+                             std::string sub_client, std::string sub_address, std::string sub_name );
+         
+            /**
+             * Method that is used to remove a route from the Spacebrew server
+             * @param {RouteEndpoint} pub_endpoint       Publisher endpoint
+             * @param {RouteEndpoint} sub_endpoint       Subscriber endpoint
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool removeRoute( RouteEndpoint pub_endpoint, RouteEndpoint sub_endpoint );
+         
+            /**
+             * Method that is used to remove a route from the Spacebrew server
+             * @param {Route} route
+             *
+             * @memberOf Spacebrew::AdminConnection
+             */
+            bool removeRoute( Route route );
+         
+            // events
+         
+            signals::signal<void (Config)>     onClientConnectEvent;
+            signals::signal<void (Config)>     onClientUpdatedEvent;
+            signals::signal<void (Config)>     onClientDisconnectEvent;
+         
+            signals::signal<void (Route)>      onRouteAdded;
+            signals::signal<void (Route)>      onRouteRemoved;
+         
+            signals::signal<void (DataMessage)> onDataPublished;
+         
+            // getters
+            std::vector<Config>      getConnectedClients();
+            std::vector<Route>       getCurrentRoutes();
+         
+        protected:
+            std::vector<Config>      connectedClients;
+            std::vector<Route>       currentRoutes;
+                
+            /**
+            * Method that handles both add and remove route requests. Responsible for parsing requests
+            * and communicating with Spacebrew server
+            */
+            void updateRoute( RouteUpdateType type, Route route );
+                
+            void processIncomingJson( Json::Value & val );
+        };
     }
 }
