@@ -1,2 +1,9 @@
 .DS_Store
-*/build/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.user
+*.xcworkspace/
+xcuserdata/
+
