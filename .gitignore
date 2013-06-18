@@ -4,6 +4,7 @@
 *.mode2v3
 *.user
 *.xcworkspace/
+*.xcodeproj/
 xcuserdata/
 .DS_Store
 
