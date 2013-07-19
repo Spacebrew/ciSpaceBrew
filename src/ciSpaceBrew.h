@@ -351,9 +351,12 @@ namespace cinder {
             
         class AdminConnection : public Connection {
         public:
+            
+            AdminConnection();
+            ~AdminConnection();
 
             // websocket methods
-            virtual void onOpen( std::string  );
+            virtual void onOpen( std::string );
             virtual void onMessage( std::string );
             
             // add routes
@@ -419,22 +422,92 @@ namespace cinder {
              */
             bool removeRoute( Route route );
          
-            // events
-         
-            signals::signal<void (Config)>     onClientConnectEvent;
-            signals::signal<void (Config)>     onClientUpdatedEvent;
-            signals::signal<void (Config)>     onClientDisconnectEvent;
-         
-            signals::signal<void (Route)>      onRouteAdded;
-            signals::signal<void (Route)>      onRouteRemoved;
-         
-            signals::signal<void (DataMessage)> onDataPublished;
-         
             // getters
             std::vector<Config>      getConnectedClients();
             std::vector<Route>       getCurrentRoutes();
+            
+            /**
+             * @brief Helper function to automatically add a listener to a admin connections events
+             * Note: you must call the normal Spacebrew::addListener function to listen to normal messages
+             * @example
+             * Spacebrew::connection;
+             *
+             * void onClientConnect( Spacebrew::Config & e ){};
+             * void onClientUpdated( Spacebrew::Config & e ){};
+             * void onClientDisconnect( Spacebrew::Config & e ){};
+             * void onRouteAdded( Spacebrew::Route & e ){};
+             * void onRouteRemoved( Spacebrew::Route & e ){};
+             * void onDataPublished( Spacebrew::DataMessage & e ){};
+             *
+             * void setup(){
+             *      Spacebrew::addAdminListener( this, connection);
+             * }
+             */
+            template<typename T, typename Y>
+            inline void addClientConnect(T callback, Y *callbackObject)
+            {
+                connectionClientConnect = onClientConnect.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            template<typename T, typename Y>
+            inline void addClientUpdate(T callback, Y *callbackObject)
+            {
+                connectionClientUpdated = onClientUpdated.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            template<typename T, typename Y>
+            inline void addClientDisconnect(T callback, Y *callbackObject)
+            {
+                connectionClientDisconnect = onClientDisconnect.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            template<typename T, typename Y>
+            inline void addRouteAdded(T callback, Y *callbackObject)
+            {
+                connectionRouteAdded = onRouteAdded.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            template<typename T, typename Y>
+            inline void addRouteRemoved(T callback, Y *callbackObject)
+            {
+                connectionRouteRemoved = onRouteRemoved.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            template<typename T, typename Y>
+            inline void addDataPublisher(T callback, Y *callbackObject)
+            {
+                connectionDataPublished = onDataPublished.connect( std::bind( callback, callbackObject, std::placeholders::_1 ) );
+            }
+            
+            inline void removeListeners()
+            {
+                connectionClientConnect.disconnect();
+                connectionClientUpdated.disconnect();
+                connectionClientDisconnect.disconnect();
+                connectionRouteAdded.disconnect();
+                connectionRouteRemoved.disconnect();
+                connectionDataPublished.disconnect();
+            }
          
         protected:
+            
+            // events
+            
+            signals::signal<void (Config)>      onClientConnect;
+            signals::connection                 connectionClientConnect;
+            signals::signal<void (Config)>      onClientUpdated;
+            signals::connection                 connectionClientUpdated;
+            signals::signal<void (Config)>      onClientDisconnect;
+            signals::connection                 connectionClientDisconnect;
+            
+            signals::signal<void (Route)>       onRouteAdded;
+            signals::connection                 connectionRouteAdded;
+            signals::signal<void (Route)>       onRouteRemoved;
+            signals::connection                 connectionRouteRemoved;
+            
+            signals::signal<void (DataMessage)> onDataPublished;
+            signals::connection                 connectionDataPublished;
+            
             std::vector<Config>      connectedClients;
             std::vector<Route>       currentRoutes;
                 
@@ -445,6 +518,8 @@ namespace cinder {
             void updateRoute( RouteUpdateType type, Route route );
                 
             void processIncomingJson( Json::Value & val );
+            
+            
         };
     }
 }

@@ -116,6 +116,13 @@ namespace cinder {
             return message;
         }
         
+        bool Config::operator == ( Config & comp ){
+            if ( name == comp.name && remoteAddress == comp.remoteAddress ){
+                return true;
+            }
+            return false;
+        }
+        
     #pragma mark Connection
         
         Connection::Connection()
@@ -410,13 +417,23 @@ namespace cinder {
         
     #pragma mark AdminConnection
         
+        AdminConnection::AdminConnection() : Connection()
+        {
+            
+        }
+        
+        AdminConnection::~AdminConnection()
+        {
+            removeListeners();
+        }
+        
         //--------------------------------------------------------------
-//        void AdminConnection::onOpen( string args ){
-//            Connection::onOpen(args);
-//            
-//            // send admin "register" message
-//            client.send("{\"admin\":[{\"admin\": true,\"no_msgs\": true}]}");
-//        }
+        void AdminConnection::onOpen( string args ){
+            Connection::onConnect();
+            
+            // send admin "register" message
+            client.write("{\"admin\":[{\"admin\": true,\"no_msgs\": true}]}");
+        }
         
         //--------------------------------------------------------------
         void AdminConnection::onMessage( string args ){
@@ -694,7 +711,7 @@ namespace cinder {
                     if ( *config == c)
                     {
                         *config = c;
-                        ofNotifyEvent(onClientUpdatedEvent, *config, this);
+                        onClientUpdated(*config);
                         bNew = false;
                         break;
                     }
@@ -709,7 +726,7 @@ namespace cinder {
                 if ( bNew ){
                     // doesn't exist yet, add as new
                     connectedClients.push_back( c );
-                    ofNotifyEvent(onClientConnectEvent, c, this);
+                    onClientConnect(c);
                 }
                 
                 // connection removed
@@ -725,7 +742,7 @@ namespace cinder {
                         if ( connectedClients[j].name == name &&
                             connectedClients[j].remoteAddress == remoteAddress)
                         {
-                            ofNotifyEvent(onClientDisconnectEvent, connectedClients[j], this);
+                            onClientDisconnect(connectedClients[j]);
                             connectedClients.erase(connectedClients.begin() + j );
                             break;
                         }
@@ -750,11 +767,11 @@ namespace cinder {
                 
                 if ( config["route"]["type"].asString() == "add" ){
                     currentRoutes.push_back(r);
-                    ofNotifyEvent(onRouteAdded, r, this);
+                    onRouteAdded(r);
                 } else if ( config["route"]["type"].asString() == "remove"){
                     for (int i=0; i<currentRoutes.size(); i++){
                         if ( currentRoutes[i] == r ){
-                            ofNotifyEvent(onRouteRemoved, r, this);
+                            onRouteRemoved(r);
                             currentRoutes.erase(currentRoutes.begin() + i );
                             break;
                         }
