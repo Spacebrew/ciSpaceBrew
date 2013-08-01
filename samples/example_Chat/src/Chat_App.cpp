@@ -18,7 +18,7 @@ class ChatApp : public AppNative {
 	void draw();
     void prepareSettings( Settings * settings );
     
-    void onMessage( Spacebrew::Message msg );
+    void onMessage( const Spacebrew::Message &msg );
     
     void renderChat( const vector<string> * chat, int placement, string label );
     void renderType();
@@ -157,7 +157,7 @@ void ChatApp::keyDown( KeyEvent event)
     }
 }
 
-void ChatApp::onMessage( Spacebrew::Message msg )
+void ChatApp::onMessage( const Spacebrew::Message &msg )
 {
     //This receives the message from your chatter and pushes the info into the vector
     if (msg.name == "yourChat") {

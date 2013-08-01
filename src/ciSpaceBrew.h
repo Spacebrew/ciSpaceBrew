@@ -33,8 +33,10 @@ namespace cinder {
         public:
             
             /** @constructor */
-            Message(std::string _name="", std::string _type="", std::string _val="");
-            virtual std::string getJSON( std::string configName );
+            Message(const std::string &name = "", const std::string &type="", const std::string &val="")
+            : name( name ), type( type ), _default( val ), value( val ) { }
+            
+            virtual std::string getJSON( const std::string &configName ) const;
             
             /**
              * @brief Name of Message
@@ -63,17 +65,17 @@ namespace cinder {
             /**
              * @brief Get your incoming value as a boolean
              */
-            bool valueBoolean();
+            bool valueBoolean() const;
             
             /**
              * @brief Get your incoming value as a range (0-1023)
              */
-            int  valueRange();
+            int  valueRange() const;
         
             /**
              * @brief Get your incoming value as a string
              */
-            std::string valueString();
+            std::string valueString() const;
         
             friend std::ostream& operator<<(std::ostream& os, const Message& vec);
         };
@@ -97,10 +99,10 @@ namespace cinder {
             // see documentation below
             // docs left out here to avoid confusion. Most people will use these methods
             // on Spacebrew::Connection directly
-            void addSubscribe( std::string name, std::string type );
-            void addSubscribe( Message m );
-            void addPublish( std::string name, std::string type, std::string def);
-            void addPublish( Message m );
+            void addSubscribe( const std::string& name, const std::string& type );
+            void addSubscribe( const Message& m );
+            void addPublish( const std::string& name, const std::string& type, const std::string& def);
+            void addPublish( const Message& m );
             
             std::string getJSON();
             std::string name, description;
@@ -123,7 +125,6 @@ namespace cinder {
          */
         class Connection {
         
-            
         public:
             
             explicit Connection( cinder::app::App * app, const std::string& host = SPACEBREW_CLOUD, const std::string& name = "cinder app", const std::string& description = "" );
@@ -142,7 +143,7 @@ namespace cinder {
              * @param {std::string} description What does your app do?
              */
             void connect();
-            void connect( std::string host, Config _config );
+            void connect( const std::string &host, const Config &config );
             
             /**
              * @brief Send a message
@@ -150,34 +151,34 @@ namespace cinder {
              * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
              * @param {std::string} value   Value (cast to string)
              */
-            void send( std::string name, std::string type, std::string value );
+            void send( const std::string &name, const std::string &type, const std::string &value );
             
             /**
              * @brief Send a string message
              * @param {std::string} name    Name of message
              * @param {std::string} value   Value
              */
-            void sendString( std::string name, std::string value );
+            void sendString( const std::string &name, const std::string &value );
             
             /**
              * @brief Send a range message
              * @param {std::string} name    Name of message
              * @param {int}         value   Value
              */
-            void sendRange( std::string name, int value );
+            void sendRange( const std::string &name, int value );
             
             /**
              * @brief Send a boolean message
              * @param {std::string} name    Name of message
              * @param {bool}        value   Value
              */
-            void sendBoolean( std::string name, bool value );
+            void sendBoolean( const std::string &name, bool value );
             
             /**
              * Send a Spacebrew Message object
              * @param {Spacebrew::Message} m
              */
-            void send( Message m );
+            void send( const Message &m );
             
             /**
              * @brief Send a Spacebrew Message object. Use this method if you've overridden Spacebrew::Message
@@ -191,13 +192,13 @@ namespace cinder {
              * @param {std::string} name    Name of message
              * @param {std::string} type    Message type ("string", "boolean", "range", or custom type)
              */
-            void addSubscribe( std::string name, std::string type );
+            void addSubscribe( const std::string &name, const std::string &type );
             
             /**
              * @brief Add a message that you want to subscribe to
              * @param {Spacebrew::Message} m
              */
-            void addSubscribe( Message m );
+            void addSubscribe( const Message &m );
             
             /**
              * @brief Add message of specific name + type to publish
@@ -205,13 +206,13 @@ namespace cinder {
              * @param {std::string} typ  Message type ("string", "boolean", "range", or custom type)
              * @param {std::string} def  Default value
              */
-            void addPublish( std::string name, std::string type, std::string def="");
+            void addPublish( const std::string &name, const std::string &type, const std::string &def = "" );
             
             /**
              * @brief Add message to publish
              * @param {Spacebrew::Message} m
              */
-            void addPublish( Message m );
+            void addPublish( const Message &m );
             
             /**
              * @return Current Spacebrew::Config (list of publish/subscribe, etc)
@@ -227,7 +228,7 @@ namespace cinder {
              * @brief Turn on/off auto reconnect (try to connect when/if Spacebrew server closes)
              * @param {boolean} bAutoReconnect (true by default)
              */
-            void setAutoReconnect( bool bAutoReconnect=true );
+            void setAutoReconnect( bool bAutoReconnect = true );
             
             /**
              * @brief How often should we try to reconnect if auto-reconnect is on (defaults to 1 second [1000 millis])
@@ -248,10 +249,10 @@ namespace cinder {
             //These are the connections to ciWebSocketPP
             void onConnect();
             void onDisconnect();
-            void onError( std::string err );
-            void onRead( std::string msg );
+            void onError( const std::string &err );
+            void onRead( const std::string &msg );
             void onInterrupt();
-            void onPing( std::string msg );
+            void onPing( const std::string &msg );
             
             /**
              * @brief signal to subscribe to!
@@ -260,7 +261,7 @@ namespace cinder {
              *     cout<< m.value << endl;
              * };
              */
-            signals::signal<void (Message)> onMessage;
+            signals::signal<void (const Message&)> onMessage;
             
             /**
              * @brief Helper function to automatically add a listener to a connections onMessage Signal

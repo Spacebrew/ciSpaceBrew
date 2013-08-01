@@ -15,14 +15,7 @@ namespace cinder {
 
     #pragma mark Message
         
-        Message::Message( string _name, string _type, string _val )
-        {
-            name = _name;
-            type = _type;
-            _default = value = _val;
-        }
-        
-        string Message::getJSON( string configName )
+        string Message::getJSON( const string &configName ) const
         {
             if ( type == "string" || type == "boolean" ){
                 return "{\"message\":{\"clientName\":\"" + configName + "\",\"name\":\"" + name + "\",\"type\":\"" + type + "\",\"value\":\"" + value +"\"}}";
@@ -31,20 +24,19 @@ namespace cinder {
             }
         }
         
-        bool Message::valueBoolean()
+        bool Message::valueBoolean() const
         {
             if (type != "boolean") cerr << "This Message is not a boolean type! You'll most likely get 'false'." << endl;
             return value == "true";
         }
         
-        int Message::valueRange()
+        int Message::valueRange() const
         {
             if ( type != "range" ) cerr << "This Message is not a range type! Results may be unpredicatable." << endl;
             return atoi(value.c_str());
-            return 0;
         }
         
-        string Message::valueString()
+        string Message::valueString() const
         {
             if (type != "string") cerr << "This Message is not a string type! Returning raw value as string." << endl;
             return value;
@@ -52,22 +44,22 @@ namespace cinder {
         
     #pragma mark Config
         
-        void Config::addSubscribe( string name, string type )
+        void Config::addSubscribe( const string &name, const string &type )
         {
             subscribe.push_back( Message( name, type ) );
         }
         
-        void Config::addSubscribe( Message m )
+        void Config::addSubscribe( const Message &m )
         {
             subscribe.push_back(m);
         }
         
-        void Config::addPublish( string name, string type, string def )
+        void Config::addPublish( const string &name, const string &type, const string &def )
         {
             publish.push_back( Message( name, type, def ) );
         }
         
-        void Config::addPublish( Message m )
+        void Config::addPublish( const Message &m )
         {
             publish.push_back(m);
         }
@@ -150,15 +142,15 @@ namespace cinder {
             client.connect( host );
         }
         
-        void Connection::connect( string _host, Config _config )
+        void Connection::connect( const string &host, const Config &config )
         {
-            host = "ws://" + _host + ":" + to_string(SPACEBREW_PORT);
-            config = _config;
+            this->host = "ws://" + host + ":" + to_string(SPACEBREW_PORT);
+            this->config = config;
             
-            client.connect( host );
+            client.connect( this->host );
         }
         
-        void Connection::send( string name, string type, string value )
+        void Connection::send( const string &name, const string &type, const string &value )
         {
             if (bConnected) {
                 Message m( name, type, value );
@@ -168,7 +160,7 @@ namespace cinder {
             }
         }
         
-        void Connection::sendString( string name, string value )
+        void Connection::sendString( const string &name, const string &value )
         {
             if (bConnected) {
                 Message m( name, "string", value );
@@ -178,7 +170,7 @@ namespace cinder {
             }
         }
         
-        void Connection::sendRange( string name, int value )
+        void Connection::sendRange( const string &name, int value )
         {
             if ( bConnected ) {
                 Message m( name, "range", to_string(value));
@@ -188,7 +180,7 @@ namespace cinder {
             }
         }
         
-        void Connection::sendBoolean( string name, bool value )
+        void Connection::sendBoolean( const string &name, bool value )
         {
             if (bConnected) {
                 string out = value ? "true" : "false";
@@ -199,7 +191,7 @@ namespace cinder {
             }
         }
         
-        void Connection::send( Message m )
+        void Connection::send( const Message &m )
         {
             if ( bConnected ) {
                 client.write( m.getJSON( config.name ) );
@@ -211,13 +203,13 @@ namespace cinder {
         void Connection::send( Message* m )
         {
             if ( bConnected ) {
-                client.write(m->getJSON(config.name));
+                client.write( m->getJSON( config.name ) );
             } else {
                 cerr << "Send failed, not connected!" << endl;
             }
         }
         
-        void Connection::addSubscribe( string name, string type )
+        void Connection::addSubscribe( const string &name, const string &type )
         {
             config.addSubscribe( name, type );
             if ( bConnected ) {
@@ -225,7 +217,7 @@ namespace cinder {
             }
         }
         
-        void Connection::addSubscribe( Message m )
+        void Connection::addSubscribe( const Message &m )
         {
             config.addSubscribe(m);
             if ( bConnected ) {
@@ -233,7 +225,7 @@ namespace cinder {
             }
         }
         
-        void Connection::addPublish( string name, string type, string def)
+        void Connection::addPublish( const string &name, const string &type, const string &def)
         {
             config.addPublish( name, type, def );
             if ( bConnected ) {
@@ -241,7 +233,7 @@ namespace cinder {
             }
         }
         
-        void Connection::addPublish( Message m )
+        void Connection::addPublish( const Message &m )
         {
             config.addPublish(m);
             if ( bConnected ) {
@@ -297,12 +289,12 @@ namespace cinder {
             lastTimeTriedConnect = this->app->getElapsedSeconds();
         }
         
-        void Connection::onError( string err )
+        void Connection::onError( const string &err )
         {
             cout << "error: " << err << endl;
         }
         
-        void Connection::onRead( string stuff )
+        void Connection::onRead( const string &stuff )
         {
             Message m;
             Json::Value json;
@@ -337,7 +329,7 @@ namespace cinder {
             
         }
         
-        void Connection::onPing( string msg )
+        void Connection::onPing( const string &msg )
         {
             
         }

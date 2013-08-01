@@ -23,7 +23,7 @@ public:
     void mouseUp( MouseEvent event );
     
     //A signal recieved from SpaceBrew will appear inside here
-    void onMessage( Spacebrew::Message );
+    void onMessage( const Spacebrew::Message &m );
     
     // useful quick test
     bool checkInsideCircle( Vec2f point, Vec2f position, int radius );
@@ -148,11 +148,10 @@ void Button::draw()
 }
 
 //the spacebrew onmessage function
-void Button::onMessage( Spacebrew::Message m)
+void Button::onMessage( const Spacebrew::Message &m )
 {
     if ( m.name == "background" ){
         bBackgroundOn = m.valueBoolean();
-        
     }
 }
 

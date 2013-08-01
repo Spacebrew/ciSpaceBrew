@@ -14,14 +14,14 @@ class Template : public AppNative {
 	void update();
 	void draw();
     
-    void onMessage(Spacebrew::Message msg);
+    void onMessage( const Spacebrew::Message &msg );
     
     Spacebrew::ConnectionRef spacebrew;
     Color myColor;
 
 };
 
-void Template::onMessage(Spacebrew::Message msg)
+void Template::onMessage( const Spacebrew::Message &msg)
 {
     if (msg.name == "backgroundOn") {
         if (msg.value == "true") {
