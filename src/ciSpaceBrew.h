@@ -91,6 +91,9 @@ namespace cinder {
         class Config {
         public:
             
+            Config() {}
+            Config( const std::string& name, const std::string& description ) : name( name ), description( description ) { }
+            
             // see documentation below
             // docs left out here to avoid confusion. Most people will use these methods
             // on Spacebrew::Connection directly
@@ -109,6 +112,10 @@ namespace cinder {
         };
         
         
+         
+        class Connection;
+        typedef std::shared_ptr< Connection > ConnectionRef;
+            
         /**
          * @brief Main Spacebrew class, connected to Spacebrew server. Sets up socket, builds configs
          * and publishes ofEvents on incoming messages.
@@ -119,7 +126,10 @@ namespace cinder {
             
         public:
             
-            Connection();
+            explicit Connection( cinder::app::App * app, const std::string& host = SPACEBREW_CLOUD, const std::string& name = "cinder app", const std::string& description = "" );
+            
+            static ConnectionRef create( cinder::app::App * app, const std::string& host = SPACEBREW_CLOUD, const std::string& name = "cinder app", const std::string& description = "" )
+            { return ConnectionRef( new Connection( app, host, name, description ) ); }
             
             ~Connection();
             
@@ -131,7 +141,7 @@ namespace cinder {
              * @param {std::string} name        Name of your app (shows up in Spacebrew admin)
              * @param {std::string} description What does your app do?
              */
-            void connect( cinder::app::App * app, std::string host = SPACEBREW_CLOUD, std::string name = "cinder app", std::string description = "" );
+            void connect();
             void connect( std::string host, Config _config );
             
             /**

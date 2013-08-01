@@ -4,7 +4,7 @@
 #include "cinder/gl/TextureFont.h"
 #include "cinder/gl/Texture.h"
 #include <vector>
-#include "ciSpaceBrew.h"
+#include "ciSpacebrew.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -23,7 +23,7 @@ class ChatApp : public AppNative {
     void renderChat( const vector<string> * chat, int placement, string label );
     void renderType();
     
-    Spacebrew::Connection spacebrew;
+    Spacebrew::ConnectionRef spacebrew;
     
     vector<string>      iWrote;
     vector<string>      uWrote;
@@ -60,11 +60,13 @@ void ChatApp::setup()
     string name = "cinder-chat-example";
     string description = "It's amazing";
 
-    spacebrew.addPublish("myChat", Spacebrew::TYPE_STRING);
-    spacebrew.addSubscribe("yourChat", Spacebrew::TYPE_STRING);
-    spacebrew.connect(this, host, name, description);
+    spacebrew = Spacebrew::Connection::create( this, host, name, description );
     
-    spacebrew.addListener( &ChatApp::onMessage, this);
+    spacebrew->addPublish("myChat", Spacebrew::TYPE_STRING);
+    spacebrew->addSubscribe("yourChat", Spacebrew::TYPE_STRING);
+    spacebrew->connect();
+    
+    spacebrew->addListener( &ChatApp::onMessage, this);
     
     receivedU = false;
     receivedMe = false;
@@ -149,7 +151,7 @@ void ChatApp::keyDown( KeyEvent event)
         s.pop_back();
     } else if (event.getCode() == KeyEvent::KEY_RETURN) {
         iWrote.push_back(s);
-        spacebrew.sendString("myChat", s);
+        spacebrew->sendString("myChat", s);
         s = "";
         receivedMe = true;
     }

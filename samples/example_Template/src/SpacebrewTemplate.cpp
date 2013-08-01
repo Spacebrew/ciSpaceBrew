@@ -1,6 +1,6 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
-#include "ciSpaceBrew.h"
+#include "ciSpacebrew.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -16,7 +16,7 @@ class Template : public AppNative {
     
     void onMessage(Spacebrew::Message msg);
     
-    Spacebrew::Connection spacebrew;
+    Spacebrew::ConnectionRef spacebrew;
     Color myColor;
 
 };
@@ -35,27 +35,30 @@ void Template::onMessage(Spacebrew::Message msg)
 void Template::setup()
 {
     
-    
     string host = "sandbox.spacebrew.cc"; // change to localhost to test Spacebrew local server
     string name = "cinder-example";
     string description = "It's amazing";
-    spacebrew.addSubscribe("backgroundOn", Spacebrew::TYPE_BOOLEAN);
-    spacebrew.addPublish("cinder-mouse", "boolean", "false");
-    spacebrew.connect( this, host, name, description );
     
-    spacebrew.addListener( &Template::onMessage, this);
+    spacebrew = Spacebrew::Connection::create( this, host, name, description );
+    
+    spacebrew->addSubscribe("backgroundOn", Spacebrew::TYPE_BOOLEAN);
+    spacebrew->addPublish("cinder-mouse", "boolean", "false");
+    
+    spacebrew->connect();
+    
+    spacebrew->addListener( &Template::onMessage, this);
     
     myColor = Color(0,0,0);
 }
 
 void Template::mouseDown( MouseEvent event )
 {
-    spacebrew.sendBoolean("cinder-mouse", true);
+    spacebrew->sendBoolean("cinder-mouse", true);
 }
 
 void Template::mouseUp( MouseEvent event )
 {
-    spacebrew.sendBoolean("cinder-mouse", false);
+    spacebrew->sendBoolean("cinder-mouse", false);
 }
 
 void Template::update()
