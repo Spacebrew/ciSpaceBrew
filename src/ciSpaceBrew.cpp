@@ -50,9 +50,9 @@ string Config::getJSON()
     
     
     for (vector<Message>::iterator it = publish.begin(); it < publish.end(); it++){
-        message += "{\"name\":\"" + it->name + "\",";
-        message += "\"type\":\"" + it->type + "\",";
-        message += "\"default\":\"" + it->value + "\"";
+        message += "{\"name\":\"" + it->getName() + "\",";
+        message += "\"type\":\"" + it->getType() + "\",";
+        message += "\"default\":\"" + it->getValue() + "\"";
         message += "}";
         if ( (it + 1) < publish.end() ){
             message += ",";
@@ -62,8 +62,8 @@ string Config::getJSON()
     message += "]},\"subscribe\": {\"messages\": [";
     
     for (vector<Message>::iterator it = subscribe.begin(); it < subscribe.end(); it++){
-        message += "{\"name\":\"" + it->name + "\",";
-        message += "\"type\":\"" + it->type + "\"";
+        message += "{\"name\":\"" + it->getName() + "\",";
+        message += "\"type\":\"" + it->getType() + "\"";
         message += "}";
         if ( (it + 1) < subscribe.end() ){
             message += ",";
@@ -288,22 +288,22 @@ void Connection::onRead( const string &stuff )
     Json::Reader reader;
     if (reader.parse(stuff, json)) {
         
-        m.name = json["message"]["name"].asString();
-        m.type = json["message"]["type"].asString();
+        m.setName( json["message"]["name"].asString() );
+        m.setType( json["message"]["type"].asString() );
         
-        if (m.type == "string" && json["message"]["value"].isString()) {
-            m.value = json["message"]["value"].asString();
-        } else if (m.type == "boolean") {
+        if (m.getType() == "string" && json["message"]["value"].isString()) {
+            m.setValue( json["message"]["value"].asString() );
+        } else if (m.getType() == "boolean") {
             if (json["message"]["value"].isInt()) {
-                m.value = json["message"]["value"].asInt();
+                m.setValue( json["message"]["value"].asInt() );
             } else if (json["message"]["value"].isString()) {
-                m.value = json["message"]["value"].asString();
+                m.setValue( json["message"]["value"].asString() );
             }
-        } else if (m.type == "range") {
+        } else if (m.getType() == "range") {
             if (json["message"]["value"].isInt()) {
-                m.value = json["message"]["value"].asInt();
+                m.setValue( json["message"]["value"].asInt() );
             } else if (json["message"]["value"].isString()) {
-                m.value = json["message"]["value"].asString();
+                m.setValue( json["message"]["value"].asString() );
             }
         }
     }
@@ -369,22 +369,22 @@ bool AdminConnection::addRoute( const string &pub_client, const string &pub_addr
     
     
     for (vector<Config>::iterator config = connectedClients.begin(); config != connectedClients.end(); config++){
-        if ( config->name == pub_client && config->remoteAddress == pub_address ){
+        if ( config->getName() == pub_client && config->getRemote() == pub_address ){
             // make sure it's a real publisher
             for ( vector<Message>::iterator publisher = config->getPublish().begin(); publisher != config->getPublish().end(); publisher++){
-                if ( publisher->name == pub_name ){
-                    pub.type = publisher->type;
+                if ( publisher->getName() == pub_name ){
+                    pub.setType( publisher->getType() );
                     bValidPublisher = true;
                     break;
                 }
             }
-        } else if ( config->name == sub_client &&
-                   config->remoteAddress == sub_address ){
+        } else if ( config->getName() == sub_client &&
+                   config->getRemote() == sub_address ){
             
             // make sure it's a real subscriber
             for ( vector<Message>::iterator subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++){
-                if ( subscriber->name == pub_name ){
-                    sub.type = subscriber->type;
+                if ( subscriber->getName() == pub_name ){
+                    sub.setType( subscriber->getType() );
                     bValidSubscriber = true;
                     break;
                 }
@@ -409,21 +409,21 @@ bool AdminConnection::addRoute( const RouteEndpoint &pub_endpoint, const RouteEn
     //find in routes list
     for (vector<Config>::iterator config = connectedClients.begin(); config != connectedClients.end(); config++){
         
-        if ( config->name == pub_endpoint.clientName &&
-            config->remoteAddress == pub_endpoint.remoteAddress ){
+        if ( config->getName() == pub_endpoint.getClient() &&
+            config->getRemote() == pub_endpoint.getRemote() ){
             // make sure it's a real publisher
             for ( vector<Message>::iterator publisher = config->getPublish().begin(); publisher != config->getPublish().end(); publisher++){
-                if ( publisher->name == pub_endpoint.name ){
+                if ( publisher->getName() == pub_endpoint.getName() ){
                     bValidPublisher = true;
                     break;
                 }
             }
-        } else if ( config->name == sub_endpoint.clientName &&
-                   config->remoteAddress == sub_endpoint.remoteAddress ){
+        } else if ( config->getName() == sub_endpoint.getClient() &&
+                   config->getRemote() == sub_endpoint.getClient() ){
             
             // make sure it's a real subscriber
             for ( vector<Message>::iterator subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++){
-                if ( subscriber->name == sub_endpoint.name ){
+                if ( subscriber->getName() == sub_endpoint.getName() ){
                     bValidSubscriber = true;
                     break;
                 }
@@ -553,15 +553,15 @@ void AdminConnection::updateRoute( RouteUpdateType type, const Route &route ){
     message["route"]["type"] = Json::Value(getRouteUpdateTypeString(type));
     
     // append pub + sub
-    message["route"]["publisher"]["name"]           = route.getPubEnd().name;
-    message["route"]["publisher"]["type"]           = route.getPubEnd().type;
-    message["route"]["publisher"]["clientName"]     = route.getPubEnd().clientName;
-    message["route"]["publisher"]["remoteAddress"]  = route.getPubEnd().remoteAddress;
+    message["route"]["publisher"]["name"]           = route.getPubEnd().getName();
+    message["route"]["publisher"]["type"]           = route.getPubEnd().getType();
+    message["route"]["publisher"]["clientName"]     = route.getPubEnd().getClient();
+    message["route"]["publisher"]["remoteAddress"]  = route.getPubEnd().getRemote();
     
-    message["route"]["subscriber"]["name"]          = route.getSubEnd().name;
-    message["route"]["subscriber"]["type"]          = route.getSubEnd().type;
-    message["route"]["subscriber"]["clientName"]    = route.getSubEnd().clientName;
-    message["route"]["subscriber"]["remoteAddress"] = route.getSubEnd().remoteAddress;
+    message["route"]["subscriber"]["name"]          = route.getSubEnd().getName();
+    message["route"]["subscriber"]["type"]          = route.getSubEnd().getType();
+    message["route"]["subscriber"]["clientName"]    = route.getSubEnd().getClient();
+    message["route"]["subscriber"]["remoteAddress"] = route.getSubEnd().getRemote();
     
     // send to server
     if ( bConnected ){
@@ -578,7 +578,7 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
     if ( !config["config"].isNull() ){
         Config c( config["config"]["name"].asString(),
                   config["config"]["description"].asString(),
-                  config["config"]["remoteAddress"].asString() )
+                 config["config"]["remoteAddress"].asString() );
         
         Json::Value publishes = config["config"]["publish"]["messages"];
         
@@ -607,7 +607,7 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
         // is this client us?
         // needs to be a better way to test this... basically just using this to add remoteAddress...
         if ( c.getJSON() == getConfig()->getJSON() ){
-            getConfig()->remoteAddress = c.remoteAddress;
+            getConfig()->setRemote( c.getRemote() );
         }
         
         if ( bNew ){

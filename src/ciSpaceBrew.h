@@ -39,6 +39,16 @@ public:
     
     virtual std::string getJSON( const std::string &configName ) const;
     
+    void setName( const std::string &name )  { this->name = name; }
+    void setType( const std::string &type )  { this->type = type; }
+    void setValue( const std::string &value )  { this->value = value; }
+    void setValue( const int value ) { this->value = std::to_string(value); }
+    
+    const std::string& getName() const { return name; }
+    const std::string& getType() const { return type; }
+    const std::string& getValue() const { return value; }
+    
+private:
     /**
      * @brief Name of Message
      * @type {std::string}
@@ -115,6 +125,11 @@ public:
     
     const std::vector<Message>& getPublish() const { return publish; }
     const std::vector<Message>& getSubscribe() const { return subscribe; }
+    
+    const std::string& getName() { return name; }
+    const std::string& getRemote() const { return remoteAddress; }
+    
+    void setRemote( const std::string & remote ) { remoteAddress = remote; }
     
     void resetPubSub() { publish.clear(); subscribe.clear(); }
     
@@ -325,6 +340,13 @@ public:
         return comp.clientName == clientName && comp.name == name && comp.type == type && comp.remoteAddress == remoteAddress;
     }
     
+    void setType( const std::string &type ) { this->type = type; }
+    
+    const std::string& getClient() const { return clientName; }
+    const std::string& getName() const { return name; }
+    const std::string& getType() const { return type; }
+    const std::string& getRemote() const { return remoteAddress; }
+    
     friend class Route;
     
 private:
@@ -458,10 +480,10 @@ public:
     bool removeRoute( const Route &route );
  
     // getters
-    std::map< std::string, Config >&      getConnectedClients() { return connectedClients; }
-    std::map< std::string, Route >&       getCurrentRoutes() { return currentRoutes; }
-    const std::map< std::string, Config >&   getConnectedClients() const { return connectedClients; }
-    const std::map< std::string, Route >&    getCurrentRoutes() const { return currentRoutes; }
+//    std::map< std::string, Config >&      getConnectedClients() { return connectedClients; }
+//    std::map< std::string, Route >&       getCurrentRoutes() { return currentRoutes; }
+//    const std::map< std::string, Config >&   getConnectedClients() const { return connectedClients; }
+//    const std::map< std::string, Route >&    getCurrentRoutes() const { return currentRoutes; }
     
     /**
      * @brief Helper function to automatically add a listener to a admin connections events
@@ -545,9 +567,12 @@ protected:
     signals::signal<void (DataMessage)> onDataPublished;
     signals::connection                 connectionDataPublished;
     
-    std::map< std::string, Config >      connectedClients;
-    std::map< std::string, Route >       currentRoutes;
-        
+    std::vector<Config>                 connectedClients;
+    std::vector<Route>                  currentRoutes;
+    
+//    std::map< std::string, Config >      connectedClients;
+//    std::map< std::string, Route >       currentRoutes;
+    
     /**
     * Method that handles both add and remove route requests. Responsible for parsing requests
     * and communicating with Spacebrew server
