@@ -73,6 +73,8 @@ private:
      */
     std::string value;
     
+    
+public:
     /**
      * @brief Get your incoming value as a boolean
      */
@@ -551,6 +553,8 @@ public:
 protected:
     
     // events
+    
+    
     
     signals::signal<void (Config)>      onClientConnect;
     signals::connection                 connectionClientConnect;

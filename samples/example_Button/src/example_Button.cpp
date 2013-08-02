@@ -150,7 +150,7 @@ void Button::draw()
 //the spacebrew onmessage function
 void Button::onMessage( const Spacebrew::Message &m )
 {
-    if ( m.name == "background" ){
+    if ( m.getName() == "background" ){
         bBackgroundOn = m.valueBoolean();
     }
 }

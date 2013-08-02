@@ -332,8 +332,8 @@ AdminConnection::~AdminConnection()
 void AdminConnection::onOpen( const string &args ){
     Connection::onConnect();
     
-    // send admin "register" message
-    client.write("{\"admin\":[{\"admin\": true,\"no_msgs\": true}]}");
+    // send admin "register" message 
+    client.write( "{\"admin\":[{\"admin\": true,\"no_msgs\": true}]}" );
 }
 
 //--------------------------------------------------------------
@@ -342,14 +342,14 @@ void AdminConnection::onMessage( const string &args ){
     Message m;
     Json::Value json;
     Json::Reader reader;
-    if (reader.parse(args, json)) {
+    if ( reader.parse( args, json ) ) {
         if ( json.isArray() ){
             for ( int k = 0; k < json.size(); k++ ) {
                 Json::Value config = json[k];
                 processIncomingJson( config );
             }
-        } else if ( !json["message"].isNull() && json["message"]["clientName"].isNull()){
-            Connection::onMessage(args);
+        } else if ( !json["message"].isNull() && json["message"]["clientName"].isNull() ){
+            Connection::onMessage( args );
         } else {
             processIncomingJson( json );
         }
@@ -368,7 +368,7 @@ bool AdminConnection::addRoute( const string &pub_client, const string &pub_addr
     bool bValidSubscriber = false;
     
     
-    for (vector<Config>::iterator config = connectedClients.begin(); config != connectedClients.end(); config++){
+    for ( auto config = connectedClients.begin(); config != connectedClients.end(); config++ ){
         if ( config->getName() == pub_client && config->getRemote() == pub_address ){
             // make sure it's a real publisher
             for ( vector<Message>::iterator publisher = config->getPublish().begin(); publisher != config->getPublish().end(); publisher++){
@@ -382,7 +382,7 @@ bool AdminConnection::addRoute( const string &pub_client, const string &pub_addr
                    config->getRemote() == sub_address ){
             
             // make sure it's a real subscriber
-            for ( vector<Message>::iterator subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++){
+            for ( auto subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++ ){
                 if ( subscriber->getName() == pub_name ){
                     sub.setType( subscriber->getType() );
                     bValidSubscriber = true;
@@ -394,8 +394,9 @@ bool AdminConnection::addRoute( const string &pub_client, const string &pub_addr
     if ( !bValidPublisher || !bValidSubscriber ){
         cerr << ( !bValidPublisher ? "Invalid publisher!\n" : "" ) << ( !bValidSubscriber ? "Invalid subscriber!" : "" ) << endl;
         return false;
-    } else {
-        updateRoute(ADD_ROUTE, Route( pub, sub ));
+    }
+    else {
+        updateRoute( ADD_ROUTE, Route( pub, sub ) );
         return true;
     }
 }
@@ -407,22 +408,23 @@ bool AdminConnection::addRoute( const RouteEndpoint &pub_endpoint, const RouteEn
     bool bValidSubscriber = false;
     
     //find in routes list
-    for (vector<Config>::iterator config = connectedClients.begin(); config != connectedClients.end(); config++){
+    for ( auto config = connectedClients.begin(); config != connectedClients.end(); config++ ){
         
         if ( config->getName() == pub_endpoint.getClient() &&
             config->getRemote() == pub_endpoint.getRemote() ){
             // make sure it's a real publisher
-            for ( vector<Message>::iterator publisher = config->getPublish().begin(); publisher != config->getPublish().end(); publisher++){
+            for ( auto publisher = config->getPublish().begin(); publisher != config->getPublish().end(); publisher++ ){
                 if ( publisher->getName() == pub_endpoint.getName() ){
                     bValidPublisher = true;
                     break;
                 }
             }
-        } else if ( config->getName() == sub_endpoint.getClient() &&
+        }
+        else if ( config->getName() == sub_endpoint.getClient() &&
                    config->getRemote() == sub_endpoint.getClient() ){
             
             // make sure it's a real subscriber
-            for ( vector<Message>::iterator subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++){
+            for( auto subscriber = config->getSubscribe().begin(); subscriber != config->getSubscribe().end(); subscriber++ ){
                 if ( subscriber->getName() == sub_endpoint.getName() ){
                     bValidSubscriber = true;
                     break;
@@ -430,10 +432,11 @@ bool AdminConnection::addRoute( const RouteEndpoint &pub_endpoint, const RouteEn
             }
         }
     }
-    if ( !bValidPublisher || !bValidSubscriber ){
+    if( !bValidPublisher || !bValidSubscriber ){
         cerr << ( !bValidPublisher ? "Invalid publisher! " : "" ) << ( !bValidSubscriber ? "Invalid subscriber!" : "" ) << endl;
         return false;
-    } else {
+    }
+    else {
         updateRoute(ADD_ROUTE, Route( pub_endpoint, sub_endpoint ));
         return true;
     }
@@ -444,15 +447,16 @@ bool AdminConnection::addRoute( const Route &route ){
     bool bValidRoute = false;
     
     //find in routes list
-    for ( vector<Route>::iterator m_route = currentRoutes.begin(); m_route != currentRoutes.end(); m_route++){
-        if ( *m_route == route ){
+    for( auto routeIt = currentRoutes.begin(); routeIt != currentRoutes.end(); routeIt++){
+        if ( *routeIt == route )
             bValidRoute = true;
-        }
+        
     }
-    if ( !bValidRoute ){
+    if( !bValidRoute ){
         cerr << "Invalid route!" << endl;
         return false;
-    } else {
+    }
+    else {
         updateRoute( ADD_ROUTE, route );
         return true;
     }
@@ -462,54 +466,51 @@ bool AdminConnection::addRoute( const Route &route ){
 bool AdminConnection::removeRoute( const string &pub_client, const string &pub_address, const string &pub_name, const string &sub_client, const string &sub_address, const string &sub_name )
 {
     //find in routes list
-    RouteEndpoint pub;
-    RouteEndpoint sub;
+    RouteEndpoint pub( pub_client, pub_name, pub_address );
+    RouteEndpoint sub( sub_client, sub_name, sub_address );
     
     bool bValidPublisher = false;
     bool bValidSubscriber = false;
     
-    for (vector<Route>::iterator m_route = currentRoutes.begin(); m_route != currentRoutes.begin(); m_route++){
-        if ( m_route->getPubEnd().clientName == pub_client &&
-            m_route->getPubEnd().name == pub_name &&
-            m_route->getPubEnd().remoteAddress == pub_address ){
-            pub = m_route->getPubEnd();
+    for( auto routeIt = currentRoutes.begin(); routeIt != currentRoutes.begin(); routeIt++){
+        if( routeIt->getPubEnd() == pub )
             bValidPublisher = true;
-        }
-        if ( m_route->getSubEnd().clientName == sub_client &&
-            m_route->getSubEnd().name == sub_name &&
-            m_route->getSubEnd().remoteAddress == sub_address ){
-            sub = m_route->getSubEnd();
+        
+        if( routeIt->getSubEnd() == sub )
             bValidSubscriber = true;
-        }
+        
     }
-    if ( !bValidPublisher || !bValidSubscriber ){
+    if( !bValidPublisher || !bValidSubscriber ){
         cerr << ( !bValidPublisher ? "Invalid publisher! " : "" ) << ( !bValidSubscriber ? "Invalid subscriber!" : "" ) << endl;
         return false;
-    } else {
-        updateRoute(REMOVE_ROUTE, Route( pub, sub ));
+    }
+    else {
+        updateRoute( REMOVE_ROUTE, Route( pub, sub ) );
         return true;
     }
 }
 
 //--------------------------------------------------------------
-bool AdminConnection::removeRoute( const RouteEndpoint &pub_endpoint, const RouteEndpoint &sub_endpoint ){
+bool AdminConnection::removeRoute( const RouteEndpoint &pubEndpoint, const RouteEndpoint &subEndpoint )
+{
     bool bValidPublisher = false;
     bool bValidSubscriber = false;
     
     //find in routes list
-    for (vector<Route>::iterator m_route = currentRoutes.begin(); m_route != currentRoutes.end(); m_route++){
-        if ( m_route->getPubEnd() == pub_endpoint ){
+    for( auto routeIt = currentRoutes.begin(); routeIt != currentRoutes.end(); routeIt++){
+        if( routeIt->getPubEnd() == pubEndpoint )
             bValidPublisher = true;
-        }
-        if ( m_route->getSubEnd() == sub_endpoint ){
+        
+        if( routeIt->getSubEnd() == subEndpoint )
             bValidSubscriber = true;
-        }
+        
     }
-    if ( !bValidPublisher || !bValidSubscriber ){
+    if( !bValidPublisher || !bValidSubscriber ){
         cerr << ( !bValidPublisher ? "Invalid publisher!\n" : "" ) << ( !bValidSubscriber ? "Invalid subscriber!" : "" ) << endl;
         return false;
-    } else {
-        updateRoute(REMOVE_ROUTE, Route( pub_endpoint, sub_endpoint ));
+    }
+    else {
+        updateRoute( REMOVE_ROUTE, Route( pubEndpoint, subEndpoint ) );
         return true;
     }
 }
@@ -519,23 +520,24 @@ bool AdminConnection::removeRoute( const Route &route ){
     bool bValidRoute = false;
     
     //find in routes list
-    for ( vector<Route>::iterator m_route = currentRoutes.begin(); m_route != currentRoutes.end(); m_route++){
-        if ( *m_route == route ){
+    for( auto routeIt = currentRoutes.begin(); routeIt != currentRoutes.end(); routeIt++){
+        if( *routeIt == route )
             bValidRoute = true;
-        }
+        
     }
-    if ( !bValidRoute ){
+    if( !bValidRoute ){
         cerr << "Invalid route!" << endl;
         return false;
-    } else {
-        updateRoute(REMOVE_ROUTE, route );
+    }
+    else {
+        updateRoute( REMOVE_ROUTE, route );
         return true;
     }
 }
 
 //--------------------------------------------------------------
-void AdminConnection::updateRoute( RouteUpdateType type, const Route &route ){
-    
+void AdminConnection::updateRoute( RouteUpdateType type, const Route &route )
+{
     Json::Value message;
     message["route"] = Json::Value( Json::objectValue );
     message["route"]["publisher"]   = Json::Value( Json::objectValue );
@@ -575,28 +577,27 @@ void AdminConnection::updateRoute( RouteUpdateType type, const Route &route ){
 void AdminConnection::processIncomingJson( const Json::Value & config ){
     
     // new connection
-    if ( !config["config"].isNull() ){
+    if( !config["config"].isNull() ){
         Config c( config["config"]["name"].asString(),
                   config["config"]["description"].asString(),
                  config["config"]["remoteAddress"].asString() );
         
         Json::Value publishes = config["config"]["publish"]["messages"];
         
-        for ( int i = 0; i < publishes.size(); i++){
+        for( int i = 0; i < publishes.size(); i++ ){
             c.addPublish(publishes[i]["name"].asString(), publishes[i]["type"].asString(), publishes[i]["default"].asString());
         }
         
         Json::Value subscribes = config["config"]["subscribe"]["messages"];
-        for ( int i=0; i<subscribes.size(); i++){
+        for( int i = 0; i < subscribes.size(); i++ ){
             c.addSubscribe(subscribes[i]["name"].asString(), subscribes[i]["type"].asString());
         }
         
         bool bNew = true;
         
         // does this client exist yet?
-        for (vector<Config>::iterator config = connectedClients.begin(); config != connectedClients.end(); config++){
-            if ( *config == c)
-            {
+        for(auto config = connectedClients.begin(); config != connectedClients.end(); config++){
+            if( *config == c ){
                 *config = c;
                 onClientUpdated(*config);
                 bNew = false;
@@ -606,29 +607,29 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
         
         // is this client us?
         // needs to be a better way to test this... basically just using this to add remoteAddress...
-        if ( c.getJSON() == getConfig()->getJSON() ){
+        if( c.getJSON() == getConfig()->getJSON() )
             getConfig()->setRemote( c.getRemote() );
-        }
         
-        if ( bNew ){
+        
+        if( bNew ){
             // doesn't exist yet, add as new
             connectedClients.push_back( c );
             onClientConnect(c);
         }
         
         // connection removed
-    } else if ( !config["remove"].isNull()){
+    }
+    else if( !config["remove"].isNull() ){
         
-        for (int i=0; i < config["remove"].size(); i++){
+        for( int i = 0; i < config["remove"].size(); i++ ){
             
             Json::Value toRemove = config["remove"][i];
             string name          = toRemove["name"].asString();
             string remoteAddress = toRemove["remoteAddress"].asString();
             
-            for (int j=0; j<connectedClients.size(); j++){
-                if ( connectedClients[j].name == name &&
-                    connectedClients[j].remoteAddress == remoteAddress)
-                {
+            for( int j = 0; j < connectedClients.size(); j++ ){
+                if ( connectedClients[j].getName() == name &&
+                    connectedClients[j].getRemote() == remoteAddress) {
                     onClientDisconnect(connectedClients[j]);
                     connectedClients.erase(connectedClients.begin() + j );
                     break;
@@ -636,7 +637,8 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
             }
         }
         // route
-    } else if ( !config["route"].isNull()){
+    }
+    else if ( !config["route"].isNull() ){
         
         Route r( RouteEndpoint( config["route"]["publisher"]["clientName"].asString(),
                                config["route"]["publisher"]["name"].asString(),
@@ -647,11 +649,12 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
                               config["route"]["subscriber"]["remoteAddress"].asString(),
                               config["route"]["subscriber"]["type"].asString()) );
         
-        if ( config["route"]["type"].asString() == "add" ){
+        if( config["route"]["type"].asString() == "add" ){
             currentRoutes.push_back(r);
             onRouteAdded(r);
-        } else if ( config["route"]["type"].asString() == "remove"){
-            for (int i = 0; i < currentRoutes.size(); i++){
+        }
+        else if( config["route"]["type"].asString() == "remove" ){
+            for( int i = 0; i < currentRoutes.size(); i++ ){
                 if ( currentRoutes[i] == r ){
                     onRouteRemoved(r);
                     currentRoutes.erase(currentRoutes.begin() + i );
@@ -661,10 +664,11 @@ void AdminConnection::processIncomingJson( const Json::Value & config ){
         }
         
         // data
-    } else if ( !config["message"].isNull()){
+    }
+    else if ( !config["message"].isNull() ){
         
         // message from admin
-        if ( !config["message"]["clientName"].isNull()){
+        if ( !config["message"]["clientName"].isNull() ){
             DataMessage m( config["message"]["clientName"].asString(),
                            config["message"]["remoteAddress"].asString(),
                            config["message"]["name"].asString(),
