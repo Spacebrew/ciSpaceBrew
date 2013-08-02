@@ -1,4 +1,4 @@
-# Mac OS X cruft
+
 *.pbxuser
 *.mode1v3
 *.mode2v3
@@ -6,16 +6,9 @@
 *.xcworkspace/
 xcuserdata/
 .DS_Store
-
 build/
-lib/libcinder*.a
-lib/cinder*.lib
-lib/cinder*.lib.*
-# Windows cruft
-*.suo
-*.ncb
-*.sdf
-*.opensdf
 Debug/
 Release/
 ipch/
+xcuserdata/
+
