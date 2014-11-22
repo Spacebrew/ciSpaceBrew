@@ -274,6 +274,8 @@ namespace cinder {
             
             
         protected:
+			
+			void initialize();
             
             //This is the connection to your Cinder App's Update Method
             signals::connection updateConnection;
@@ -291,7 +293,7 @@ namespace cinder {
             int lastTimeTriedConnect;
             int reconnectInterval;
             
-            WebSocketClient client;
+            WebSocketClient* client;
             
         };
             
