@@ -104,42 +104,59 @@ namespace cinder {
             reconnectInterval( 2000 ),
             bAutoReconnect( false ),
             lastTimeTriedConnect( 0 ),
-            config( Config( name, description ) )
+            config( Config( name, description ) ),
+			client( NULL )
         {
-            updateConnection = this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ) ) ;
-            //TODO: See if we can add a listener here to websocketpp cinder to automate this
-            //WebSocketPP Interface
-            client.addConnectCallback( &Connection::onConnect, this );
-            client.addDisconnectCallback( &Connection::onDisconnect, this );
-            client.addErrorCallback( &Connection::onError, this );
-            client.addInterruptCallback( &Connection::onInterrupt, this );
-            client.addPingCallback( &Connection::onPing, this );
-            client.addReadCallback( &Connection::onRead, this );
-            
+			initialize();
         }
         
         Connection::~Connection()
         {
+			// Disconnect update signal:
             updateConnection.disconnect();
+			// Delete previous ws client object, if necessary:
+			if( client != NULL ) { delete client; }
         }
-        
-
+		
+		void Connection::initialize()
+		{
+			// Delete previous ws client object, if necessary:
+			if( client != NULL ) { delete client; }
+			// Initialize ws client:
+			client = new WebSocketClient();
+			// Setup callbacks:
+			updateConnection = this->app->getSignalUpdate().connect( std::bind( &Connection::update, this ) ) ;
+			//TODO: See if we can add a listener here to websocketpp cinder to automate this
+			//WebSocketPP Interface
+			client->addConnectCallback( &Connection::onConnect, this );
+			client->addDisconnectCallback( &Connection::onDisconnect, this );
+			client->addErrorCallback( &Connection::onError, this );
+			client->addInterruptCallback( &Connection::onInterrupt, this );
+			client->addPingCallback( &Connection::onPing, this );
+			client->addReadCallback( &Connection::onRead, this );
+		}
+		
         void Connection::update()
         {
-            client.poll();
-            
+            client->poll();
+
             if ( bAutoReconnect ) {
-              
-                if ( !bConnected && this->app->getElapsedSeconds() - lastTimeTriedConnect > reconnectInterval) {
-                   
-                    connect( host, config );
+                if ( !bConnected && this->app->getElapsedSeconds() - lastTimeTriedConnect > reconnectInterval * 1e-3 ) {
+					// Disconnect update signal:
+					updateConnection.disconnect();
+					// Re-initialize ws client:
+					initialize();
+					// Re-establish connection:
+					client->connect( this->host );
+					// Reset connection attempt time:
+					lastTimeTriedConnect = this->app->getElapsedSeconds();
                 }
             }
         }
         
         void Connection::connect()
         {
-            client.connect( host );
+            client->connect( host );
         }
         
         void Connection::connect( const string &host, const Config &config )
@@ -147,7 +164,7 @@ namespace cinder {
             this->host = "ws://" + host + ":" + to_string(SPACEBREW_PORT);
             this->config = config;
             
-            client.connect( this->host );
+            client->connect( this->host );
         }
         
         void Connection::send( const string &name, const string &type, const string &value )
@@ -194,7 +211,7 @@ namespace cinder {
         void Connection::send( const Message &m )
         {
             if ( bConnected ) {
-                client.write( m.getJSON( config.name ) );
+                client->write( m.getJSON( config.name ) );
             } else {
                 cerr << "Send failed, not connected!" << endl;
             }
@@ -203,7 +220,7 @@ namespace cinder {
         void Connection::send( Message* m )
         {
             if ( bConnected ) {
-                client.write( m->getJSON( config.name ) );
+                client->write( m->getJSON( config.name ) );
             } else {
                 cerr << "Send failed, not connected!" << endl;
             }
@@ -268,7 +285,7 @@ namespace cinder {
         
         void Connection::updatePubSub()
         {
-            client.write( config.getJSON() );
+            client->write( config.getJSON() );
         }
         
         string Connection::getHost()
@@ -278,7 +295,7 @@ namespace cinder {
         
         void Connection::onConnect(  )
         {
-            bConnected = "true";
+            bConnected = true;
             updatePubSub();
         }
         
