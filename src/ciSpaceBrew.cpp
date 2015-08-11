@@ -179,7 +179,7 @@ ConnectionRef Connection::create( const std::string& host, const std::string& na
 
 Connection::Connection( const std::string& host, const std::string& name, const std::string& description )
 : mHost( "ws://" + host + ":" + to_string(SPACEBREW_PORT) ),
-    mIsConnected( false ), mReconnectInterval( 2000 ), mShouldAutoReconnect( false ),
+    mIsConnected( false ), mReconnectInterval( 2.0 ), mShouldAutoReconnect( false ),
     mLastTimeTriedConnect( 0 ), mConfig( Config( name, description ) )
 {
 	initialize();
@@ -211,7 +211,7 @@ void Connection::update()
     mClient->poll();
 
     if ( mShouldAutoReconnect ) {
-        if ( ! mIsConnected && getElapsedSeconds() - mLastTimeTriedConnect > mReconnectInterval * 1e-3 ) {
+        if ( ! mIsConnected && getElapsedSeconds() - mLastTimeTriedConnect > mReconnectInterval ) {
 			// Disconnect update signal:
 			mUpdateConnection.disconnect();
 			// Re-initialize ws client:
@@ -320,22 +320,15 @@ void Connection::addSubscribe( const Message &m )
 void Connection::addPublish( const string &name, const string &type, const string &def)
 {
     mConfig.addPublish( name, type, def );
-    if ( mIsConnected ) {
+    if ( mIsConnected )
         updatePubSub();
-    }
 }
 
 void Connection::addPublish( const Message &m )
 {
     mConfig.addPublish( m );
-    if ( mIsConnected ) {
+    if ( mIsConnected )
         updatePubSub();
-    }
-}
-
-bool Connection::isConnected()
-{
-    return mIsConnected;
 }
 
 void Connection::onConnect()

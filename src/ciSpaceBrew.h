@@ -166,8 +166,8 @@ class Connection : ci::Noncopyable {
 public:
     
 	static ConnectionRef create( const std::string& host = SPACEBREW_CLOUD,
-								const std::string& name = "cinder app",
-								const std::string& description = "" );
+								 const std::string& name = "cinder app",
+								 const std::string& description = "" );
 	
     virtual ~Connection();
 	
@@ -259,8 +259,8 @@ public:
     /**
      * @return Are we connected?
      */
-    bool isConnected();
-    
+	bool isConnected() { return mIsConnected; }
+	
     /**
      * @brief Turn on/off auto reconnect (try to connect when/if Spacebrew server closes)
      * @param {boolean} bAutoReconnect (true by default)
@@ -316,9 +316,9 @@ protected:
 	virtual void update();
 	void updatePubSub() { mClient->write( mConfig.getJSON() ); }
 	
+	std::unique_ptr<WebSocketClient> mClient;
 	//This is the connection to your Cinder App's Update Method
 	ci::signals::Connection mUpdateConnection;
-	std::unique_ptr<WebSocketClient> mClient;
 	
     std::string		mHost;
     Config			mConfig;
@@ -327,8 +327,6 @@ protected:
 					mShouldAutoReconnect;
     double			mLastTimeTriedConnect,
 					mReconnectInterval;
-	
-    
 };
     
 //Creating the Routes
