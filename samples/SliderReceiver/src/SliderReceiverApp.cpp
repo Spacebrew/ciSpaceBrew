@@ -34,7 +34,7 @@ void SliderReceiverApp::setup()
     
     mSpacebrew->connect();
     
-    mCurrentColor = ci::Color(0, 0, 0);
+    mCurrentColor = ci::Color(0.5f, 0.5f, 0.5f);
 }
 
 void SliderReceiverApp::mouseDown( MouseEvent event )
@@ -57,9 +57,13 @@ void SliderReceiverApp::draw()
 
 void SliderReceiverApp::onMessage(const Spacebrew::Message &msg)
 {
+    //  get the value
     float receivedValue = (float)msg.valueAsRange();
+    
     //  map the received value to a number between 0 and 1
     float colorValue = lmap<float>(receivedValue, 0.f, 1023.f, 0.f, 1.f);
+    
+    //  change the colors
     if (msg.getName() == "red") {
         mCurrentColor.r = colorValue;
     } else if (msg.getName() == "green") {

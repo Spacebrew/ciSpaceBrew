@@ -92,6 +92,12 @@ void SliderSenderApp::mouseDrag(MouseEvent event) {
     for (auto &button : mSliderButtons) {
         if (button.isSelected) {
             button.pos.x = event.getPos().x + button.offset;
+            if (button.pos.x < 50) {
+                button.pos.x = 50;
+            } else if (button.pos.x > ci::app::getWindowWidth() - 50) {
+                button.pos.x = ci::app::getWindowWidth() - 50;
+            }
+            
             sendSliderValue(button.name, button.pos.x);
         }
     }
@@ -100,7 +106,7 @@ void SliderSenderApp::mouseDrag(MouseEvent event) {
 void SliderSenderApp::sendSliderValue(string name, float value)
 {
     //  range values are integers from 0 to 1023
-    int mappedValue = lmap<int>(value, 0, ci::app::getWindowWidth(), 0, 1023);
+    int mappedValue = lmap<int>(value, 50, ci::app::getWindowWidth() - 50, 0, 1023);
     mSpacebrew->sendRange(name, mappedValue);
 }
 
