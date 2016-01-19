@@ -16,14 +16,14 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
-		0292FF323DDC4BAF93A53448 /* ciSpaceBrew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6AECC44157094BF08FDA480D /* ciSpaceBrew.cpp */; };
-		2444D54B231647DA9A14E5EA /* WebSocketConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7779CCBEC4C4AC09D33583E /* WebSocketConnection.cpp */; };
+		19577BC1D1C0460EAA9D9F2E /* WebSocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 500FC39DC8C2412CB4453218 /* WebSocketServer.cpp */; };
+		1ACE035A85A54E548B297945 /* ciSpaceBrew.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42C1E6157BC04AECB6862FFA /* ciSpaceBrew.cpp */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		6B155B1151D3482A83F9E661 /* SliderReceiverApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D9BF8F827A14F32AC9629D0 /* SliderReceiverApp.cpp */; };
+		79B843C26F1C4885990FAE0A /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6D7D7EE78ACE44E58F9B61A1 /* CinderApp.icns */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		A63CE4E997BC4529BA8CE79D /* WebSocketServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7AD0AA814D147E4B11FC4E3 /* WebSocketServer.cpp */; };
-		E68304BD3257437D8A913E84 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2DA8D85AB5A549C1973E2DDB /* CinderApp.icns */; };
-		E9AB34A911804EF49FB77E3D /* ButtonApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CF6C4ECEFE84AC0B53175D7 /* ButtonApp.cpp */; };
-		FA17A2B3DFC4422F8554D352 /* WebSocketClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C120A447A349789DD584C4 /* WebSocketClient.cpp */; };
+		C5FAB29DE13C4CD59FEAB38B /* WebSocketClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9B50FF751E74BC3B447D40B /* WebSocketClient.cpp */; };
+		F3199DC23FC348EA9B79B7E2 /* WebSocketConnection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21F7FF865FD44CA3A452B7C3 /* WebSocketConnection.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,24 +36,24 @@
 		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		0D9BF8F827A14F32AC9629D0 /* SliderReceiverApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = SliderReceiverApp.cpp; path = ../src/SliderReceiverApp.cpp; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		2956A27988C24841B914C648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E6BA5CABADF44B183B673ED /* SliderReceiver_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = SliderReceiver_Prefix.pch; sourceTree = "<group>"; };
+		21F7FF865FD44CA3A452B7C3 /* WebSocketConnection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketConnection.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.cpp"; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2CABF418C220471B889EEB25 /* WebSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.h"; sourceTree = "<group>"; };
-		2DA8D85AB5A549C1973E2DDB /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
-		4CF6C4ECEFE84AC0B53175D7 /* ButtonApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = ButtonApp.cpp; path = ../src/ButtonApp.cpp; sourceTree = "<group>"; };
+		42C1E6157BC04AECB6862FFA /* ciSpaceBrew.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = ciSpaceBrew.cpp; path = ../../../src/ciSpaceBrew.cpp; sourceTree = "<group>"; };
+		500FC39DC8C2412CB4453218 /* WebSocketServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketServer.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.cpp"; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
-		6AECC44157094BF08FDA480D /* ciSpaceBrew.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = ciSpaceBrew.cpp; path = ../../../src/ciSpaceBrew.cpp; sourceTree = "<group>"; };
-		82C120A447A349789DD584C4 /* WebSocketClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WebSocketClient.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.cpp"; sourceTree = "<group>"; };
-		8D1107320486CEB800E47090 /* Button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Button.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		980BB144198B45C480B1C8AA /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
-		B7AD0AA814D147E4B11FC4E3 /* WebSocketServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WebSocketServer.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.cpp"; sourceTree = "<group>"; };
-		CCD84C0D78194062B2C02CEE /* WebSocketServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketServer.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.h"; sourceTree = "<group>"; };
-		D1FB8A905CD1408D873D2F98 /* Button_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = Button_Prefix.pch; sourceTree = "<group>"; };
-		E9334395396B43079D7057EE /* WebSocketConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketConnection.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.h"; sourceTree = "<group>"; };
-		F636767A0B6D41469BAC5D6B /* ciSpaceBrew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciSpaceBrew.h; path = ../../../src/ciSpaceBrew.h; sourceTree = "<group>"; };
-		F7779CCBEC4C4AC09D33583E /* WebSocketConnection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = WebSocketConnection.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.cpp"; sourceTree = "<group>"; };
+		6D7D7EE78ACE44E58F9B61A1 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		781EDF9DE9BA439285F1FE6F /* WebSocketConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketConnection.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketConnection.h"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* SliderReceiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderReceiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96DFF25E1BD84683AE0F730B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DD181EB6214A30A0B9816F /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		A9B50FF751E74BC3B447D40B /* WebSocketClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = WebSocketClient.cpp; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.cpp"; sourceTree = "<group>"; };
+		C0BD93198A7B40A89B0E88C1 /* ciSpaceBrew.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ciSpaceBrew.h; path = ../../../src/ciSpaceBrew.h; sourceTree = "<group>"; };
+		C269EBAF4B294D80A7AF10C0 /* WebSocketClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketClient.h"; sourceTree = "<group>"; };
+		C7FC6C3E7BC24F4299D0A983 /* WebSocketServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebSocketServer.h; path = "../../../../Cinder-WebSocketPP/src/WebSocketServer.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +81,8 @@
 		01B97315FEAEA392516A2CEA /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				4FD16E7824A147FAA404BA6F /* Cinder-WebSocketPP */,
-				E7B24D38D3C74C39B5E31544 /* Spacebrew */,
+				714E65EAA4D74B94B546B94F /* Cinder-WebSocketPP */,
+				40974077A74C498FAC260024 /* Spacebrew */,
 			);
 			name = Blocks;
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4CF6C4ECEFE84AC0B53175D7 /* ButtonApp.cpp */,
+				0D9BF8F827A14F32AC9629D0 /* SliderReceiverApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -122,28 +122,15 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		11D1D124E98948689D494DC4 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				82C120A447A349789DD584C4 /* WebSocketClient.cpp */,
-				F7779CCBEC4C4AC09D33583E /* WebSocketConnection.cpp */,
-				B7AD0AA814D147E4B11FC4E3 /* WebSocketServer.cpp */,
-				2CABF418C220471B889EEB25 /* WebSocketClient.h */,
-				E9334395396B43079D7057EE /* WebSocketConnection.h */,
-				CCD84C0D78194062B2C02CEE /* WebSocketServer.h */,
-			);
-			name = src;
-			sourceTree = "<group>";
-		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D1107320486CEB800E47090 /* Button.app */,
+				8D1107320486CEB800E47090 /* SliderReceiver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* Button */ = {
+		29B97314FDCFA39411CA2CEA /* SliderReceiver */ = {
 			isa = PBXGroup;
 			children = (
 				01B97315FEAEA392516A2CEA /* Blocks */,
@@ -153,14 +140,14 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
-			name = Button;
+			name = SliderReceiver;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				980BB144198B45C480B1C8AA /* Resources.h */,
-				D1FB8A905CD1408D873D2F98 /* Button_Prefix.pch */,
+				A2DD181EB6214A30A0B9816F /* Resources.h */,
+				1E6BA5CABADF44B183B673ED /* SliderReceiver_Prefix.pch */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -168,8 +155,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2DA8D85AB5A549C1973E2DDB /* CinderApp.icns */,
-				2956A27988C24841B914C648 /* Info.plist */,
+				6D7D7EE78ACE44E58F9B61A1 /* CinderApp.icns */,
+				96DFF25E1BD84683AE0F730B /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -183,37 +170,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4FD16E7824A147FAA404BA6F /* Cinder-WebSocketPP */ = {
+		40974077A74C498FAC260024 /* Spacebrew */ = {
 			isa = PBXGroup;
 			children = (
-				11D1D124E98948689D494DC4 /* src */,
+				71C6E1C504CA4EA2B0237C93 /* src */,
+			);
+			name = Spacebrew;
+			sourceTree = "<group>";
+		};
+		714E65EAA4D74B94B546B94F /* Cinder-WebSocketPP */ = {
+			isa = PBXGroup;
+			children = (
+				D695CD2494C5460FA599DCBA /* src */,
 			);
 			name = "Cinder-WebSocketPP";
 			sourceTree = "<group>";
 		};
-		9CF8E1E728A341B2910C1359 /* src */ = {
+		71C6E1C504CA4EA2B0237C93 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				6AECC44157094BF08FDA480D /* ciSpaceBrew.cpp */,
-				F636767A0B6D41469BAC5D6B /* ciSpaceBrew.h */,
+				42C1E6157BC04AECB6862FFA /* ciSpaceBrew.cpp */,
+				C0BD93198A7B40A89B0E88C1 /* ciSpaceBrew.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
 		};
-		E7B24D38D3C74C39B5E31544 /* Spacebrew */ = {
+		D695CD2494C5460FA599DCBA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				9CF8E1E728A341B2910C1359 /* src */,
+				A9B50FF751E74BC3B447D40B /* WebSocketClient.cpp */,
+				21F7FF865FD44CA3A452B7C3 /* WebSocketConnection.cpp */,
+				500FC39DC8C2412CB4453218 /* WebSocketServer.cpp */,
+				C269EBAF4B294D80A7AF10C0 /* WebSocketClient.h */,
+				781EDF9DE9BA439285F1FE6F /* WebSocketConnection.h */,
+				C7FC6C3E7BC24F4299D0A983 /* WebSocketServer.h */,
 			);
-			name = Spacebrew;
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8D1107260486CEB800E47090 /* Button */ = {
+		8D1107260486CEB800E47090 /* SliderReceiver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Button" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SliderReceiver" */;
 			buildPhases = (
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
@@ -223,10 +223,10 @@
 			);
 			dependencies = (
 			);
-			name = Button;
+			name = SliderReceiver;
 			productInstallPath = "$(HOME)/Applications";
-			productName = Button;
-			productReference = 8D1107320486CEB800E47090 /* Button.app */;
+			productName = SliderReceiver;
+			productReference = 8D1107320486CEB800E47090 /* SliderReceiver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +236,7 @@
 			isa = PBXProject;
 			attributes = {
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Button" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SliderReceiver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -246,11 +246,11 @@
 				French,
 				German,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA /* Button */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* SliderReceiver */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8D1107260486CEB800E47090 /* Button */,
+				8D1107260486CEB800E47090 /* SliderReceiver */,
 			);
 		};
 /* End PBXProject section */
@@ -260,7 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E68304BD3257437D8A913E84 /* CinderApp.icns in Resources */,
+				79B843C26F1C4885990FAE0A /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AB34A911804EF49FB77E3D /* ButtonApp.cpp in Sources */,
-				FA17A2B3DFC4422F8554D352 /* WebSocketClient.cpp in Sources */,
-				2444D54B231647DA9A14E5EA /* WebSocketConnection.cpp in Sources */,
-				A63CE4E997BC4529BA8CE79D /* WebSocketServer.cpp in Sources */,
-				0292FF323DDC4BAF93A53448 /* ciSpaceBrew.cpp in Sources */,
+				6B155B1151D3482A83F9E661 /* SliderReceiverApp.cpp in Sources */,
+				C5FAB29DE13C4CD59FEAB38B /* WebSocketClient.cpp in Sources */,
+				F3199DC23FC348EA9B79B7E2 /* WebSocketConnection.cpp in Sources */,
+				19577BC1D1C0460EAA9D9F2E /* WebSocketServer.cpp in Sources */,
+				1ACE035A85A54E548B297945 /* ciSpaceBrew.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,24 +293,19 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Button_Prefix.pch;
+				GCC_PREFIX_HEADER = SliderReceiver_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(CINDER_PATH)/include",
-					"$(CINDER_PATH)/blocks/Cinder-WebSocketPP/src",
-					"$(CINDER_PATH)/include/asio",
-				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Button;
+				PRODUCT_NAME = SliderReceiver;
 				SYMROOT = ./build;
-				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include $(CINDER_PATH)/blocks/Cinder-WebSocketPP/src $(CINDER_PATH)/include/asio";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../../../src $(CINDER_PATH)/blocks/Cinder-WebSocketPP/src $(CINDER_PATH)/include/asio";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -327,25 +322,20 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Button_Prefix.pch;
+				GCC_PREFIX_HEADER = SliderReceiver_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(CINDER_PATH)/include",
-					"$(CINDER_PATH)/blocks/Cinder-WebSocketPP/src",
-					"$(CINDER_PATH)/include/asio",
-				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Button;
+				PRODUCT_NAME = SliderReceiver;
 				STRIP_INSTALLED_PRODUCT = YES;
 				SYMROOT = ./build;
-				USER_HEADER_SEARCH_PATHS = "$(CINDER_PATH)/include $(CINDER_PATH)/blocks/Cinder-WebSocketPP/src $(CINDER_PATH)/include/asio";
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include ../../../src $(CINDER_PATH)/blocks/Cinder-WebSocketPP/src $(CINDER_PATH)/include/asio";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -355,14 +345,14 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CINDER_PATH = ../../../../..;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_TESTABILITY = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\"",
-					"\"../blocks/Cinder-WebSocketPP/src\"",
+					"\"../../../../Cinder-WebSocketPP/src\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -376,13 +366,13 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CINDER_PATH = ../../../../..;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\"",
-					"\"../blocks/Cinder-WebSocketPP/src\"",
+					"\"../../../../Cinder-WebSocketPP/src\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
@@ -393,7 +383,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Button" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "SliderReceiver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4B08A954540054247B /* Debug */,
@@ -402,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Button" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "SliderReceiver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
