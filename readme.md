@@ -1,12 +1,41 @@
-Spacebrew port for Cinder
+ciSpacebrew
+=====
+A [Spacebrew](http://spacebrew.cc) implementation for [Cinder](http://libcinder.org) 0.9.0
 
-Working off of Cinder-WebSocketPP Block, you can find it here...https://github.com/BanTheRewind/Cinder-WebSocketPP.
+Spacebrew is a service and toolkit for choreographing interactive spaces.
 
-To use, place in your blocks directory and add it and Cinder-WebsocketsPP
-to your project in TinderBox.
+###Setup
+* ciSpacebrew requires the Cinder-WebSocketPP block (com.wk.websocketpp)
+Latest commit at time of writing is `e89368be757550fa1a10b9611345d79a008e7766`
+* If you create a project via TinderBox, it will automatically include the proper libraries and paths into your Cinder project.
 
-It is set up to work out of the box at sandbox.spacebrew.cc at port 9000.
+###Use
 
-check out http://docs.spacebrew.cc/ for more info.
+* First include the header file `#include "ciSpacebrew.h"`
+
+* Create a ConenctionRef to start a spacebrew session.
+```Spacebrew::ConnectionRef spacebrew = Spacebrew::Connection::create();``` 
+By default this will connect automatically to the Spacebrew Cloud (sandbox.spacebrew.cc on port 9000).  This is fine for prototyping, but you should set up your own instance for any production work.
+
+* Optionally use a custom constructor to connect to your own instance
+ ```Spacebrew::ConnectionRef spacebrew = Spacebrew::Connection::create("localhost", 8080, "My Spacebrew app", "An app to test out the functionality of Spacebrew!");```
+
+* Add publishers and subscribers to talk to other apps
+	```
+	spacebrew->addPublish("button", Spacebrew::TYPE_BOOLEAN);
+	spacebrew->addSubscribe("message", Spacebrew::TYPE_STRING);
+	```
+	
+* Listen for messages and/or send some out!
+```
+spacebrew->addListener( [](const Spacebrew::Message &m){
+	console() << "We got a message! " << m.getName() << endl;
+}, this);
+
+spacebrew->send("button", Spacebrew::TYPE_BOOLEAN, true);
+```
+
+--
+Check out [http://docs.spacebrew.cc/](http://docs.spacebrew.cc/) for more info.
 
 

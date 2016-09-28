@@ -153,10 +153,8 @@ private:
 };
 
 
- 
-class Connection;
-typedef std::shared_ptr< Connection > ConnectionRef;
-    
+
+using ConnectionRef = std::shared_ptr<class Connection>;
 /**
  * @brief Main Spacebrew class, connected to Spacebrew server. Sets up socket, builds configs
  * and publishes ofEvents on incoming messages.
@@ -166,13 +164,18 @@ class Connection : ci::Noncopyable {
 public:
     
 	static ConnectionRef create( const std::string& host = SPACEBREW_CLOUD,
-								 const std::string& name = "cinder app",
+								 const std::string& name = "Cinder App",
 								 const std::string& description = "" );
+    
+    static ConnectionRef create( const std::string& host = SPACEBREW_CLOUD,
+                                 const uint16_t &port = SPACEBREW_PORT,
+                                 const std::string& name = "Cinder App",
+                                 const std::string& description = "" );
 	
     virtual ~Connection();
 	
     /**
-     * @brief Connect to Spacebrew. Pass empty values to connect to default host as "openFrameworks" app
+     * @brief Connect to Spacebrew. Pass empty values to connect to default host as "cinder app"
      * (use only for testing!)
      * @param {cinder::app::App*} app   This defines the attached cinder app to control time and update connection 
      * @param {std::string} host        Host to connect to (e.g. "localhost", SPACEBREW_CLOUD ). Can be IP address OR hostname
@@ -181,6 +184,7 @@ public:
      */
     void connect();
     void connect( const std::string &host, const Config &config );
+    void connect( const std::string &host, const uint16_t &port, const Config &config );
     
     /**
      * @brief Send a message
@@ -310,7 +314,7 @@ public:
     
     
 protected:
-	Connection( const std::string& host, const std::string& name, const std::string& description );
+	Connection( const std::string& host, const uint16_t &port, const std::string& name, const std::string& description );
 	void initialize();
 	
 	virtual void update();

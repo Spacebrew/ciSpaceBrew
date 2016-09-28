@@ -7,10 +7,13 @@
 	license="BSD"
 	summary="Implements Brett Refner's Spacebrew Websocket Protocol."
 	>
+	<requires>com.wk.websocketpp</requires>
+	
     <platform os="macosx">
         <sourcePattern>src/ciSpaceBrew.cpp</sourcePattern>
         <headerPattern>src/ciSpaceBrew.h</headerPattern>
         <includePath>src</includePath>
+		<includePath cinder="true" system="true">include/asio</includePath>
 	</platform>
 </block>
 </cinder>

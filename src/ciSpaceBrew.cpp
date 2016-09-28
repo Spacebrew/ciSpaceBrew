@@ -174,11 +174,16 @@ string Config::getJSON() const
 	
 ConnectionRef Connection::create( const std::string& host, const std::string& name, const std::string& description )
 {
-	return ConnectionRef( new Connection( host, name, description ) );
+	return ConnectionRef( new Connection( host, SPACEBREW_PORT, name, description ) );
+}
+    
+ConnectionRef Connection::create( const std::string& host, const uint16_t &port, const std::string& name, const std::string& description )
+{
+    return ConnectionRef( new Connection( host, port, name, description ) );
 }
 
-Connection::Connection( const std::string& host, const std::string& name, const std::string& description )
-: mHost( "ws://" + host + ":" + to_string(SPACEBREW_PORT) ),
+Connection::Connection( const std::string& host, const uint16_t &port, const std::string& name, const std::string& description )
+: mHost( "ws://" + host + ":" + to_string(port) ),
     mIsConnected( false ), mReconnectInterval( 2.0 ), mShouldAutoReconnect( false ),
     mLastTimeTriedConnect( 0 ), mConfig( Config( name, description ) )
 {
@@ -231,7 +236,12 @@ void Connection::connect()
 
 void Connection::connect( const string &host, const Config &config )
 {
-    mHost = "ws://" + host + ":" + to_string(SPACEBREW_PORT);
+    connect( host, SPACEBREW_PORT, config);
+}
+    
+void Connection::connect( const std::string &host, const uint16_t &port, const Config &config )
+{
+    mHost = "ws://" + host + ":" + to_string(port);
     mConfig = config;
     
     mClient->connect( mHost );
