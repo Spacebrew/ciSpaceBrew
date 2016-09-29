@@ -17,7 +17,7 @@ class ButtonApp : public App {
 	void mouseDown( MouseEvent event ) override;
 	void mouseUp( MouseEvent event ) override;
 	
-	//A signal recieved from SpaceBrew will appear inside here
+	// A signal recieved from SpaceBrew will appear inside here
 	void onMessage( const Spacebrew::Message &m );
 	
 	// useful quick test
@@ -86,7 +86,7 @@ void ButtonApp::setup()
 	msg             = "PRESS ME";
 	
 	auto & config = spacebrew->getConfig();
-	cout << config.getJSON() << endl;
+	console() << config.getJSON() << endl;
 }
 
 void ButtonApp::update()
